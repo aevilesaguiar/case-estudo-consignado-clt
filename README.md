@@ -4,7 +4,7 @@
 
 <!-- BANNER PRINCIPAL (HERO) -->
 <div align="center">
-  <img src="![pm](image.png)" alt="Product Portfolio Banner" width="100%" style="border-radius: 8px; max-height: 280px; object-fit: cover;">
+  <img width="250" height="220" alt="image" src="https://github.com/user-attachments/assets/ba78e50a-88e3-4339-a481-cdde4c03d477" alt="Product Portfolio Banner" width="100%" style="border-radius: 8px; max-height: 280px; object-fit: cover;">
   <p align="center" style="font-size: 18px; margin-top: 15px; color: #555; font-weight: 500;">
     Resolução de problemas de negócio, estratégias de descobrimento e decisões orientadas a dados e métricas.
   </p>
