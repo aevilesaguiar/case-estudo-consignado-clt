@@ -23,7 +23,14 @@ Como as parcelas são descontadas diretamente da folha de pagamento, o risco da 
 
 Atualmente, o Brasil possui mais de **47 milhões de trabalhadores assalariados com carteira assinada**. A expectativa é incluir aproximadamente **25 milhões de pessoas no consignado privado em quatro anos**.
 
----
+
+O Crédito do Trabalhador é um programa federal, instituído pela **Medida Provisória nº 1.292/2025** e regulamentado pela **Portaria MTE nº 435/2025**, que universalizou o consignado privado.
+
+O empréstimo é contratado exclusivamente pelo trabalhador das seguintes categorias:
+
+- **101:** trabalhador CLT;
+- **104:** empregado doméstico;
+- **721:** diretor não empregado com direito ao FGTS.
 
 ## 📌 O que é o CGCONSIG?
 
@@ -269,3 +276,216 @@ Tabela com a compilação das leis, medidas provisórias, decretos e portarias q
 | **Portaria MTE nº 933/2025** | Atualiza dispositivos da Portaria MTE nº 435/2025 relativos ao fluxo de consignações. | [Acessar Portaria](https://www.in.gov.br/en/web/dou/-/portaria-mte-n-933-de-5-de-junho-de-2025-634696918) |
 | **Portaria MTE nº 1.039/2025** | Altera a Portaria MTE nº 434/2025 para ajustar regras do processo de habilitação de consignatárias. | [Acessar Portaria](https://www.in.gov.br/en/web/dou/-/portaria-mte-n-1.039-de-11-de-junho-de-2025-635606976) |
 | **Portaria MTE nº 1.131/2025** | Atualiza as regras de penalidades e multas alterando a Portaria MTP nº 667/2021. | [Acessar Portaria](https://www.google.com/search?q=https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/credito-do-trabalhador/legislacao-do-governo-federal/portaria-mte-no-1-131-de-3-de-julho-de-2025-multas.pdf/) |
+
+
+## Manuais
+
+### Manual de Orientação do Empregador
+
+> **Programa Crédito do Trabalhador**  
+> **Versão 2.1 — 26/06/2026**
+
+https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/credito-do-trabalhador/empregador/manual-operacional-do-empregador
+
+---
+
+### Parte 1: Glossário de termos técnicos
+
+Para compreender a operação, é fundamental dominar estes conceitos:
+
+- **Escrituração:** ato de registrar e declarar formalmente fatos financeiros e trabalhistas, como salários, adicionais e descontos de empréstimos, no sistema oficial do Governo — o **eSocial**.
+
+- **Averbação:** registro oficial da proposta de empréstimo aprovada entre o trabalhador e o banco na plataforma do programa, reservando a margem para o desconto automático.
+
+- **Competência:** mês e ano de referência em que o trabalho foi prestado e ao qual os descontos e obrigações pertencem.  
+  **Exemplo:** competência maio de 2025.
+
+- **Rubrica — Natureza 9253:** código utilizado na folha de pagamento para identificar o tipo de verba. A **Natureza 9253** é a rubrica específica cadastrada no eSocial para identificar os descontos de empréstimo consignado.
+
+- **Remuneração disponível:** base salarial do trabalhador após os descontos obrigatórios ou legais, como INSS, IRRF, faltas e pensão alimentícia. Sobre esse valor é aplicado o limite de 35% de desconto.
+
+- **Margem consignável:** valor máximo do salário do empregado que pode ser comprometido mensalmente com a parcela do empréstimo. Está limitado a **35% da remuneração disponível**.
+
+- **DET — Domicílio Eletrônico Trabalhista:** plataforma oficial de comunicação eletrônica entre o Ministério do Trabalho e Emprego e o empregador, utilizada para enviar avisos sobre novos contratos.
+
+- **eSocial:** sistema do Governo no qual a empresa escritura os eventos relacionados à folha de pagamento.
+
+- **FGTS Digital:** sistema do Ministério do Trabalho e Emprego no qual o empregador gera as guias que reúnem o FGTS e as parcelas descontadas do consignado, por meio da Guia Rápida ou Parametrizada.
+
+- **DAE — Documento de Arrecadação do eSocial:** guia unificada de pagamento utilizada por empregadores domésticos, MEIs e segurados especiais no portal do eSocial.
+
+- **Provisão:** reserva antecipada de valor realizada pela empresa, no adiantamento salarial ou nas férias, para garantir saldo suficiente no fechamento da folha para descontar a parcela do empréstimo.
+
+---
+
+### Parte 2: Resumo executivo
+
+#### Papel do empregador
+
+O empregador não precisa assinar convênios. Suas obrigações são:
+
+- Consultar os valores averbados;
+- Escriturar o desconto no eSocial;
+- Descontar a parcela do contracheque;
+- Repassar o valor ao banco por meio do pagamento da guia.
+
+---
+
+#### 2. Ciclo operacional mensal
+
+```text
+1. DET
+   ↓
+2. Portal Emprega Brasil
+   ↓
+3. eSocial
+   ↓
+4. FGTS Digital ou DAE
+```
+
+#### 1. Aviso no DET
+
+Entre os dias **21 e 25 de cada mês**, o Governo avisa a empresa sobre novos contratos.
+
+> A falta de leitura do aviso não isenta a empresa da obrigação.
+
+#### 2. Consulta no Portal Emprega Brasil
+
+Entre os dias **21 e 25**, a empresa deve acessar o portal para baixar o arquivo atualizado com os valores exatos que deverão ser descontados.
+
+A consulta pode ser realizada:
+
+- Pelo portal;
+- Por API;
+- Por arquivo JSON integrado ao sistema de folha.
+
+#### 3. Escrituração no eSocial
+
+O empregador deve lançar a rubrica de natureza `9253` nos seguintes eventos remuneratórios:
+
+- `S-1200`;
+- `S-2299`;
+- `S-2399`.
+
+Devem ser informados:
+
+- Valor descontado;
+- Código do banco;
+- Número do contrato.
+
+#### 4. Geração e pagamento da guia
+
+- **Empresas em geral:** geram a guia consolidada no **FGTS Digital**.
+- **Empregadores domésticos, MEIs e segurados especiais:** fazem o recolhimento pela **Guia DAE**, no Módulo Simplificado do eSocial.
+
+#### 5. Prazo de vencimento
+
+A guia que contém o consignado vence até o **dia 20 do mês seguinte à competência**.
+
+> Caso a data caia em final de semana ou feriado, o vencimento é antecipado para o dia útil anterior.
+
+---
+
+#### 3. Calendário e janela de contratação
+
+A competência do primeiro desconto é definida pelo período em que o contrato foi averbado.
+
+| Janela de contratação ou averbação | Competência do desconto | Vencimento da guia |
+|---|---|---|
+| 21 de março a 20 de abril | Maio | 20 de junho |
+| 21 de abril a 20 de maio | Junho | 18 de julho — antecipado |
+| 21 de maio a 20 de junho | Julho | 20 de agosto |
+
+---
+
+#### 4. Cálculo do limite de desconto
+
+O desconto está limitado a **35% da remuneração disponível**.
+
+$$
+\text{Remuneração disponível}
+=
+\text{Vencimentos com incidência de INSS}
+-
+\text{Descontos compulsórios}
+$$
+
+Os descontos compulsórios incluem:
+
+- INSS;
+- IRRF;
+- Pensão alimentícia;
+- Faltas.
+
+#### O que não entra no cálculo
+
+Não entram no cálculo da remuneração disponível:
+
+- Verbas sem incidência de INSS, como PLR, vale-transporte e premiações;
+- Descontos voluntários, como plano de saúde e farmácia.
+
+#### Insuficiência de saldo
+
+Se a remuneração disponível for reduzida no mês e o limite de 35% ficar abaixo do valor da parcela, a empresa deverá realizar o **desconto parcial**, respeitando a margem disponível.
+
+Isso pode acontecer, por exemplo, em razão de:
+
+- Faltas;
+- Afastamentos;
+- Redução da remuneração no mês.
+
+#### Comunicação ao trabalhador
+
+A empresa deve informar no contracheque que o desconto não foi realizado integralmente porque ultrapassaria a margem disponível.
+
+O trabalhador deverá ser orientado a pagar o valor restante diretamente à instituição financeira.
+
+---
+
+### 5. Regras especiais e exceções
+
+#### Férias e adiantamento salarial
+
+Como o adiantamento não reduz a remuneração disponível no cálculo mensal, a empresa deve realizar uma **provisão**, ou seja, uma reserva proporcional no recibo de adiantamento.
+
+Essa reserva evita a falta de saldo no fechamento da folha para o desconto da parcela.
+
+#### Décimo terceiro salário
+
+É proibido descontar parcelas do consignado na folha do **décimo terceiro salário**.
+
+#### Rescisão ou desligamento
+
+Se o contrato prever a utilização das verbas rescisórias como garantia, em percentual de 0% a 100%, a empresa deverá descontar o valor aplicável na rescisão.
+
+O valor descontado será o menor entre:
+
+1. O percentual dado em garantia sobre a remuneração disponível rescisória;
+2. O saldo devedor informado pelo banco.
+
+#### Transferência ou sucessão empresarial
+
+Em transferências entre empresas do mesmo grupo ou sucessões empresariais, o novo CNPJ somente deverá escriturar e descontar a parcela depois que o contrato aparecer vinculado a ele no Portal Emprega Brasil.
+
+---
+
+### 6. Responsabilidades legais e sanções
+
+#### Retenção sem repasse
+
+Se a empresa descontar o valor do salário e não pagar a guia, ela se torna responsável pelo valor não repassado ao banco, além de poder arcar com juros e multas.
+
+#### Falta de escrituração
+
+Não registrar o desconto no eSocial pode gerar autuação administrativa por descumprimento de obrigação relacionada à folha de pagamento.
+
+#### Livre escolha
+
+A empresa não pode:
+
+- Interferir na escolha do banco;
+- Direcionar o trabalhador para determinada instituição;
+- Impor condições para a contratação do empréstimo.
+
+
+
