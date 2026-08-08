@@ -154,60 +154,118 @@ No Crédito do Trabalhador, o pagamento é descontado diretamente da folha. Isso
 > **Atenção:** para comparar as opções corretamente, o trabalhador deve observar o **Custo Efetivo Total — CET**, e não apenas a taxa de juros ou o valor da parcela.
 
 
-## 🎯 Desafio
+## 📌 Habilitação das Instituições Consignatárias
 
-* Compreender as regras de margem consignável e o impacto do desligamento do trabalhador CLT.
-* Identificar onde o consignado traz valor real ao cliente e quando ele se torna arriscado.
-* Tornar as regras de elegibilidade simples o suficiente para apoiar decisões de crédito e comunicação transparente.
+A habilitação permite que bancos, financeiras e cooperativas operem no programa **Crédito do Trabalhador**.
 
----
+O processo é regulamentado pelas seguintes normas:
 
-## 🧭 Abordagem
-
-1. Pesquisa de produto
-   * Estudo das regras de consignação privada para CLT.
-   * Levantamento da legislação e das boas práticas do mercado.
-
-2. Diagnóstico do cliente
-   * Identificação do perfil ideal: funcionários estáveis, baixo risco de desligamento e necessidade emergencial de crédito.
-   * Avaliação dos benefícios frente à alternativa de crédito pessoal comum.
-
-3. Modelagem da solução
-   * Definição de regras de margem disponível e limites máximos.
-   * Consideração das consequências de rescisão de contrato, cálculo de parcelas e condições de cancelamento.
-
-4. Validação de produto
-   * Simulação de cenários reais para diferentes faixas salariais.
-   * Análise da experiência do usuário: comunicação, clareza de custos e impactos no orçamento.
+- **Portaria MTE nº 434/2025**;
+- **Portaria MTE nº 1.039/2025**.
 
 ---
 
-## 💡 Solução
+### 📄 Documentação necessária
 
-* Matriz de elegibilidade com critérios claros para concessão ao trabalhador CLT.
-* Regras de margem consignável ajustadas para mitigar risco em caso de demissão.
-* Painel explicativo que compara consignado CLT vs. crédito pessoal tradicional.
-* Recomendações de produtos para clientes com maior probabilidade de inadimplência.
+A instituição deve apresentar:
 
----
+- ato que comprove os poderes do representante legal;
+- estatuto ou contrato social;
+- certidão de regularidade fiscal;
+- certificado de regularidade do FGTS;
+- certidão negativa de débitos trabalhistas;
+- comprovação de autorização do Banco Central;
+- consulta ao Unicad para comprovação do código bancário;
+- cadastro ativo no consumidor.gov.br;
+- informações da conta bancária que receberá os repasses.
 
-## 📈 Resultados esperados
-
-* Melhor entendimento dos limites e riscos do consignado para CLT.
-* Comunicação mais transparente com clientes sobre comprometimento de renda.
-* Decisões de crédito fundamentadas em regras de margem e histórico de emprego.
-* Redução de custos de inadimplência em operações de consignado privado.
-
----
-
-## 🛠️ Ferramentas utilizadas
-
-* FigJam
-* Excel
-* SQL
+> **Atenção:** todas as certidões devem estar dentro do prazo de validade e os documentos precisam ser assinados digitalmente.
 
 ---
 
-## 📌 Destaque
+### 🔄 Etapas da habilitação
 
-Este case mostra uma abordagem prática para equilibrar oportunidade de crédito e proteção do cliente. A solução é ideal para escritórios de crédito, fintechs e times de produto que precisam formalizar regras de concessão com foco em CLT.
+#### 1. Atualização cadastral
+
+Os signatários da instituição devem acessar o Marketplace da Dataprev utilizando uma conta **gov.br com nível prata ou ouro** e atualizar seus dados cadastrais.
+
+#### 2. Solicitação de habilitação
+
+A instituição deverá:
+
+1. acessar o Marketplace da Dataprev;
+2. selecionar o produto **Crédito do Trabalhador**;
+3. preencher os dados da instituição;
+4. anexar os documentos exigidos;
+5. informar a vigência contratual de **60 meses**;
+6. enviar a solicitação.
+
+#### 3. Análise do MTE
+
+O Ministério do Trabalho e Emprego verificará a conformidade da documentação apresentada.
+
+Caso existam documentos ausentes, inválidos ou vencidos, o pedido será rejeitado e uma nova solicitação deverá ser protocolada.
+
+#### 4. Assinatura dos documentos
+
+Após a aprovação, os signatários deverão assinar digitalmente:
+
+- o contrato com a Dataprev;
+- o Termo de Habilitação;
+- a declaração de veracidade e qualificação técnica.
+
+#### 5. Homologação e ativação
+
+A instituição deverá concluir e homologar **100% dos cenários técnicos e operacionais**.
+
+Após a homologação, a Dataprev ativará a instituição para operar no programa Crédito do Trabalhador.
+
+---
+
+### 🎯 Ponto principal
+
+A habilitação possui duas dimensões:
+
+| Dimensão | Objetivo |
+|---|---|
+| Regulatória e documental | Comprovar que a instituição está autorizada, regular e apta a operar |
+| Técnica e operacional | Integrar os sistemas, testar os cenários e garantir o funcionamento da jornada |
+
+Somente após cumprir essas duas dimensões a instituição poderá oferecer e operacionalizar o **Crédito do Trabalhador**.
+
+---
+
+### ⚠️ Regras importantes
+
+- Não são aceitos documentos assinados manualmente.
+- Toda a documentação deve ser assinada digitalmente.
+- As certidões devem estar dentro do prazo de validade.
+- Pendências documentais podem resultar na rejeição da solicitação.
+- A instituição somente poderá operar após concluir a homologação técnica.
+
+  ### Instituições consignatárias habilitadas
+
+https://docs.google.com/spreadsheets/d/1TQIi_vyREXU1jmrgb3MSPRsWfeedVZKRe0e1hzvYQJU/edit?usp=sharing
+
+### Legislação do governo federal
+
+Aqui está o resumo estruturado e formatado em tabela Markdown com os devidos links para você utilizar no seu documento:
+
+### 📜 Legislação do Governo Federal - Crédito do Trabalhador / Consignado
+
+Tabela com a compilação das leis, medidas provisórias, decretos e portarias que regulamentam a operacionalização, habilitação e governança do Crédito Consignado em Folha de Pagamento.
+
+| Normativa | Resumo / Objetivo Principal | Link Oficial |
+| --- | --- | --- |
+| **Lei nº 10.820/2003** | Dispõe sobre a autorização para desconto de prestações em folha de pagamento do trabalhador CLT, definindo as regras gerais do consignado. | [Acessar Lei](https://www.planalto.gov.br/ccivil_03/LEIS/2003/L10.820.htm) |
+| **Medida Provisória nº 1.292/2025** | Altera a Lei nº 10.820/2003 para modernizar o sistema, criando o ecossistema digital do **Crédito do Trabalhador**. | [Acessar MP](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/mpv/mpv1292.htm) |
+| **Decreto nº 4.840/2003** | Regulamenta a MP nº 130/2003 sobre o desconto de prestações em folha de pagamento. | [Acessar Decreto](https://www.planalto.gov.br/ccivil_03/decreto/2003/d4840.htm) |
+| **Decreto nº 12.415/2025** | Dispõe sobre a criação e funcionamento do **Comitê Gestor das Operações de Crédito Consignado** e suas competências. | [Acessar Decreto](https://legislacao.presidencia.gov.br/atos/?tipo=DEC&numero=12415&ano=2025&data=20/03/2025&ato=cack3Z61UNZpWTebc) |
+| **Portaria MTE nº 433/2025** | Define o papel e a governança técnica de órgãos como **Dataprev, SERPRO e Caixa** na operacionalização das plataformas digitais do consignado. | [Acessar Portaria](https://www.in.gov.br/en/web/dou/-/portaria-mte-n-433-de-20-de-marco-de-2025-619007430) |
+| **Portaria MTE nº 434/2025** | Estabelece os requisitos e formalidades para que **bancos, fintechs e cooperativas se habilitem** como instituições consignatárias. | [Acessar Portaria](https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/legislacao/portarias-1/portarias-vigentes-3/PDFPortariaMTEn434de20demarode2025compiladaem09.07.20251.pdf) |
+| **Portaria MTE nº 435/2025** | Fixa os critérios operacionais e procedimentos práticos para a aplicação dos descontos diretos na folha de pagamento do trabalhador. | [Acessar Portaria](https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/legislacao/portarias-1/portarias-vigentes-3/PDFPortariaMTEn435de20demarode2025compiladaem08.07.2025.pdf) |
+| **Portaria MTE nº 491/2025** | Realiza os primeiros ajustes técnicos no texto original da Portaria MTE nº 435/2025. | [Acessar Portaria](https://www.in.gov.br/en/web/dou/-/portaria-mte-n-491-de-31-de-marco-de-2025-621072137) |
+| **Portaria MTE nº 505/2025** | Promove alterações e complementações operacionais na Portaria MTE nº 435/2025. | [Acessar Portaria](https://www.in.gov.br/en/web/dou/-/portaria-mte-n-505-de-3-de-abril-de-2025-621904289) |
+| **Portaria MTE nº 933/2025** | Atualiza dispositivos da Portaria MTE nº 435/2025 relativos ao fluxo de consignações. | [Acessar Portaria](https://www.in.gov.br/en/web/dou/-/portaria-mte-n-933-de-5-de-junho-de-2025-634696918) |
+| **Portaria MTE nº 1.039/2025** | Altera a Portaria MTE nº 434/2025 para ajustar regras do processo de habilitação de consignatárias. | [Acessar Portaria](https://www.in.gov.br/en/web/dou/-/portaria-mte-n-1.039-de-11-de-junho-de-2025-635606976) |
+| **Portaria MTE nº 1.131/2025** | Atualiza as regras de penalidades e multas alterando a Portaria MTP nº 667/2021. | [Acessar Portaria](https://www.google.com/search?q=https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/credito-do-trabalhador/legislacao-do-governo-federal/portaria-mte-no-1-131-de-3-de-julho-de-2025-multas.pdf/) |
