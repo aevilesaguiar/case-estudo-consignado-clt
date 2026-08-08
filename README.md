@@ -22,11 +22,11 @@
     <!-- CARD DO CASE 01 -->
     <td width="50%" valign="top">
       <a href="./case-01-consignado-clt">
-        <img src="https://unsplash.com" alt="Capa Case 1" width="100%" style="border-radius: 6px;">
+      <img width="1408" height="768" alt="Gemini_Generated_Image_xkjbjnxkjbjnxkjb" src="https://github.com/user-attachments/assets/20c4abe1-0f41-4769-a249-555287d54855" alt="Capa Case 1" width="100%" style="border-radius: 6px;">
       </a>
       <h3>📱 01. Crédito Consignado CLT</h3>
-      <p><b>Desafio:</b> Alto índice de abandono de usuários na etapa de validação de dados junto ao eSocial.</p>
-      <p><b>Solução:</b> Redesenho da esteira de integração digital e implementação de validação assíncrona.</p>
+      <p><b>Desafio:</b>  Entender, na prática, os riscos, benefícios e regras do consignado privado antes de decidir se ele vale a pena para o trabalhador CLT.</p>
+      <p><b>Solução:</b> Estudo do produto cobrindo regras de margem e rescisão, benefícios reais, riscos do desligamento e o perfil de cliente para quem ele faz sentido.</p>
       <p><code>FigJam</code> &middot; <code>Excel</code> &middot; <code>SQL</code></p>
       <a href="./case-01-consignado-clt"><b>Ver Case Completo ➔</b></a>
     </td>
