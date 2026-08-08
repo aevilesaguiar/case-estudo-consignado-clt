@@ -1,83 +1,158 @@
 # 01. Crédito Consignado CLT
 
-## 📌 O que é o crédito do Trabalhador?
+## 📌 O que é o Crédito do Trabalhador?
 
-O Crédito do Trabalhador é um programa inovador que facilita o acesso ao crédito para milhões de empregados do setor privado, promovendo inclusão financeira e maior segurança econômica. O programa permite que trabalhadores celetistas, domésticos, rurais, empregados de MEI e diretores não empregados com direito ao FGTS solicitem crédito junto às instituições financeiras habilitadas pelo Ministério do Trabalho e Emprego. Os trabalhadores podem substituir dívidas caras, como empréstimos pessoais sem garantia (CDC), carnê de pagamento das financeiras, o rotativo do cartão e o cheque especial, por um crédito com juros significativamente mais baixos. Atualmente, o Brasil conta com mais de 47 milhões de trabalhadores assalariados com carteira assinada, e a expectativa é que, em 4 anos, 25 milhões de pessoas sejam incluídas no consignado privado.
+O **Crédito do Trabalhador** é um programa que facilita o acesso ao crédito para milhões de empregados do setor privado, promovendo **inclusão financeira** e maior segurança econômica.
 
-## 📌 CGCONSIG
-O Comitê Gestor das Operações de Crédito Consignado (CGCONSIG) é um órgão colegiado, de natureza deliberativa, composto por representantes do Ministério do Trabalho e Emprego, da Casa Civil da Presidência da República e do Ministério da Fazenda, que atuam na definição de parâmetros e diretrizes para as operações de crédito consignado. O Comitê foi instituído pelo artigo 2º-G da Lei nº 10.820, de 17 de dezembro de 2003, com redação dada pela Lei nº 15.179, de 24 de julho de 2025, regulamentado pelo Decreto nº 12.415, de 20 de março de 2025, e teve seus membros designados pela Portaria MTE nº 1.272, de 29 de julho de 2025.
+O programa permite que solicitem crédito às instituições financeiras habilitadas pelo **Ministério do Trabalho e Emprego — MTE**:
 
-Entre as funções mais importantes do órgão, estão as de definir os elementos, os termos e as condições dos contratos, propor medidas de aperfeiçoamento da regulamentação do crédito consignado, além de estabelecer mecanismos de monitoramento e avaliação do desempenho das operações. O Comitê também exerce papel essencial na transparência e no aperfeiçoamento do sistema de crédito consignado, contribuindo para maior segurança e equilíbrio nas relações entre trabalhadores, empregadores e instituições financeiras.
+* trabalhadores celetistas;
+* empregados domésticos;
+* trabalhadores rurais;
+* empregados de MEI;
+* diretores não empregados com direito ao FGTS.
 
-O CGCONSIG reúne-se ordinariamente a cada trimestre e, em caráter extraordinário, por convocação de seu coordenador, cargo exercido pelo Representante do Ministério do Trabalho e Emprego. Suas decisões são tomadas por maioria absoluta. O Comitê pode instituir grupos de trabalho específicos e convidar especialistas e representantes de órgãos e entidades públicas e privadas para participar de suas reuniões, sem direito a voto.
+Um dos principais objetivos do programa é permitir que os trabalhadores substituam dívidas mais caras, como:
 
-A Secretaria-Executiva é exercida pelo Ministério do Trabalho e Emprego, por meio da própria Secretaria-Executiva e da Secretaria de Proteção ao Trabalhador. O suporte técnico-operacional ao Comitê é prestado pela Dataprev, pelo Serpro e pela Caixa Econômica Federal.
+* empréstimos pessoais sem garantia — CDC;
+* carnês de financeiras;
+* crédito rotativo do cartão;
+* cheque especial.
 
-** COMPOSIÇÃO - CGCONSIG**
+Como as parcelas são descontadas diretamente da folha de pagamento, o risco da operação tende a ser menor. Isso possibilita a oferta de crédito com **juros potencialmente mais baixos**.
 
-Coordenação
-Francisco Macena da Silva (Coordenador)
-
-Carlos Augusto Simões Gonçalves Junior (Secretário-Executivo)
-
-Representantes
-Ministério do Trabalho e Emprego
-
-Francisco Macena da Silva (Titular)
-
-Carlos Augusto Simões Gonçalves Junior (Suplente)
-
-Casa Civil da Presidência da República
-
-Rogério da Veiga (Titular)
-
-Karina Félix Cardoso (Suplente)
-
-Ministério da Fazenda
-
-Regis Anderson Dudena (Titular)
-
-Vinicius Ratton Brandi (Suplente)
-
-Suporte Técnico-Operacional
-DATAPREV
-
-Alan do Nascimento Santos
-
-SERPRO
-
-Arthur Fisch
-
-Tatiana de Souza Lima Borges
-
-CAIXA
-
-Marcelo Maschio Pegolo
+Atualmente, o Brasil possui mais de **47 milhões de trabalhadores assalariados com carteira assinada**. A expectativa é incluir aproximadamente **25 milhões de pessoas no consignado privado em quatro anos**.
 
 ---
 
-## Conceitos
+## 📌 O que é o CGCONSIG?
 
-### Celetista é o trabalhador contratado pelas regras da CLT — Consolidação das Leis do Trabalho, ou seja, quem trabalha formalmente para uma empresa com registro na Carteira de Trabalho.
+O **Comitê Gestor das Operações de Crédito Consignado — CGCONSIG** é um órgão colegiado de natureza deliberativa responsável por definir parâmetros e diretrizes para as operações de crédito consignado.
+
+O Comitê é composto por representantes dos seguintes órgãos:
+
+* Ministério do Trabalho e Emprego;
+* Casa Civil da Presidência da República;
+* Ministério da Fazenda.
+
+O CGCONSIG foi instituído pelo artigo 2º-G da **Lei nº 10.820, de 17 de dezembro de 2003**, com redação dada pela **Lei nº 15.179, de 24 de julho de 2025**.
+
+Também foi regulamentado pelo **Decreto nº 12.415, de 20 de março de 2025**, e teve seus membros designados pela **Portaria MTE nº 1.272, de 29 de julho de 2025**.
+
+### Principais funções do CGCONSIG
+
+Entre as principais responsabilidades do Comitê estão:
+
+* definir elementos, termos e condições dos contratos;
+* propor melhorias na regulamentação do crédito consignado;
+* estabelecer mecanismos de monitoramento das operações;
+* avaliar o desempenho do programa;
+* acompanhar taxas de juros e o Custo Efetivo Total — CET;
+* contribuir para a transparência das operações;
+* promover maior segurança e equilíbrio entre trabalhadores, empregadores e instituições financeiras.
+
+### Funcionamento
+
+O CGCONSIG reúne-se:
+
+* **ordinariamente:** uma vez por trimestre;
+* **extraordinariamente:** quando convocado pelo coordenador.
+
+As decisões são tomadas por **maioria absoluta**.
+
+O Comitê também pode:
+
+* criar grupos de trabalho para temas específicos;
+* convidar especialistas;
+* receber representantes de órgãos públicos;
+* receber representantes de entidades privadas.
+
+Os convidados podem participar das discussões, mas não possuem direito a voto.
+
+### Secretaria-Executiva
+
+A Secretaria-Executiva é exercida pelo **Ministério do Trabalho e Emprego**, por meio:
+
+* da Secretaria-Executiva;
+* da Secretaria de Proteção ao Trabalhador.
+
+O suporte técnico e operacional é prestado por:
+
+* Dataprev;
+* Serpro;
+* Caixa Econômica Federal.
+
+---
+
+## 👥 Composição do CGCONSIG
+
+### Coordenação
+
+| Função               | Responsável                            |
+| -------------------- | -------------------------------------- |
+| Coordenador          | Francisco Macena da Silva              |
+| Secretário-Executivo | Carlos Augusto Simões Gonçalves Junior |
+
+### Representantes governamentais
+
+| Órgão                                  | Titular                   | Suplente                               |
+| -------------------------------------- | ------------------------- | -------------------------------------- |
+| Ministério do Trabalho e Emprego       | Francisco Macena da Silva | Carlos Augusto Simões Gonçalves Junior |
+| Casa Civil da Presidência da República | Rogério da Veiga          | Karina Félix Cardoso                   |
+| Ministério da Fazenda                  | Regis Anderson Dudena     | Vinicius Ratton Brandi                 |
+
+### Suporte técnico-operacional
+
+| Instituição             | Representantes                              |
+| ----------------------- | ------------------------------------------- |
+| Dataprev                | Alan do Nascimento Santos                   |
+| Serpro                  | Arthur Fisch e Tatiana de Souza Lima Borges |
+| Caixa Econômica Federal | Marcelo Maschio Pegolo                      |
+
+---
+
+## 📚 Conceitos importantes
+
+### Celetista
+
+**Celetista** é o trabalhador contratado pelas regras da **CLT — Consolidação das Leis do Trabalho**. Em outras palavras, é quem trabalha formalmente para uma empresa, com vínculo registrado na Carteira de Trabalho.
 
 Normalmente, o trabalhador celetista possui direitos como:
 
-salário registrado;
-férias remuneradas;
-13º salário;
-FGTS;
-INSS;
-descanso semanal;
-aviso-prévio;
-seguro-desemprego, quando aplicável.
+* salário registrado;
+* férias remuneradas;
+* 13º salário;
+* Fundo de Garantia do Tempo de Serviço — FGTS;
+* contribuição para o Instituto Nacional do Seguro Social — INSS;
+* descanso semanal remunerado;
+* aviso-prévio;
+* seguro-desemprego, quando aplicável.
 
-No contexto do Crédito do Trabalhador, o celetista pode solicitar o empréstimo porque seu vínculo empregatício e sua remuneração estão registrados no eSocial. Assim, as parcelas podem ser descontadas diretamente do salário.
+No contexto do Crédito do Trabalhador, o celetista pode solicitar o empréstimo porque seu vínculo empregatício e sua remuneração estão registrados no **eSocial**.
 
-### CDC significa Crédito Direto ao Consumidor.
+Com essas informações, é possível verificar sua elegibilidade, calcular a margem consignável e descontar as parcelas diretamente da folha de pagamento.
 
-É um tipo de empréstimo concedido por bancos ou financeiras para a pessoa usar livremente ou comprar algum bem ou serviço. Quando aparece como “CDC sem garantia”, significa que o cliente recebe o dinheiro sem oferecer um imóvel, veículo ou outro bem como garantia.
+---
 
-Por isso, costuma ter juros mais altos: o banco assume um risco maior de não receber.
+### CDC — Crédito Direto ao Consumidor
+
+**CDC** significa **Crédito Direto ao Consumidor**.
+
+É um tipo de crédito oferecido por bancos ou financeiras para que uma pessoa possa:
+
+* receber dinheiro para uso livre;
+* comprar produtos;
+* contratar serviços;
+* financiar determinados bens.
+
+Quando aparece a expressão **“CDC sem garantia”**, significa que o cliente recebe o dinheiro sem oferecer um imóvel, veículo ou outro bem como garantia do pagamento.
+
+Como a instituição financeira não possui um bem para recuperar caso o cliente deixe de pagar, o risco da operação é maior. Por esse motivo, o CDC sem garantia costuma apresentar **juros mais altos**.
+
+No Crédito do Trabalhador, o pagamento é descontado diretamente da folha. Isso reduz parte do risco da operação e pode permitir a oferta de taxas mais baixas.
+
+> **Atenção:** para comparar as opções corretamente, o trabalhador deve observar o **Custo Efetivo Total — CET**, e não apenas a taxa de juros ou o valor da parcela.
+
 
 ## 🎯 Desafio
 
