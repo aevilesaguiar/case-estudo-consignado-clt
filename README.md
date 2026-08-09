@@ -68,6 +68,7 @@ Navegue abaixo pelos entregáveis analíticos e técnicos que compõem este estu
 
 ## 📬 Contato & Conexões
 
-* **GitHub:** [aevilesaguiar/case-estudo-consignado-clt](https://github.com/aevilesaguiar/case-estudo-consignado-clt/blob/main/)
-* **LinkedIn:** [seu-perfil-aqui](https://linkedin.com)
-* **E-mail:** seu.email@provedor.com
+* **GitHub:** [aevilesaguiar/case-estudo-consignado-clt](https://github.com/aevilesaguiar/case-estudo-consignado-clt.md)
+* **LinkedIn:** [seu-perfil-aqui]([https://linkedin.com](https://www.linkedin.com/in/aeviles-aguiar-silva/))
+* **E-mail:** aevilesaguiar@gmail.com
+* **Portfólio:**[ https://aevilesaguiar.lovable.app/#sobre]( https://aevilesaguiar.lovable.app/#sobre)
