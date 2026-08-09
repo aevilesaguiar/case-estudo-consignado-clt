@@ -1,0 +1,306 @@
+# Crédito do Trabalhador — Documentação Técnica Completa
+### Base: documentação oficial docs.dataprev.gov.br + manuais MTE
+
+---
+
+## 1. Visão geral
+
+Solução digital que moderniza o acesso ao crédito consignado para trabalhadores do RGPS (Regime Geral da Previdência Social — inclui CLT, doméstico, rural e diretor não empregado com FGTS). Automatiza o cálculo da margem consignável e integra instituições financeiras habilitadas com os sistemas governamentais (eSocial, CNIS, CTPS Digital, FGTS Digital, DET).
+
+**Público-alvo do produto:** instituições financeiras previamente autorizadas pelo MTE (é um produto B2B2C — o "cliente" direto da Dataprev é o banco, não o trabalhador).
+
+**Gestão automatizada cobre:** averbação, encerramento, renegociação, exclusões e conciliações.
+
+---
+
+## 2. Base legal completa (linha do tempo)
+
+| Norma | Data | O que faz |
+|---|---|---|
+| Lei nº 10.820/2003 | 17/12/2003 | Lei-mãe do consignado privado |
+| MP nº 1.292/2025 | 12/03/2025 | MP que criou o Crédito do Trabalhador |
+| Portaria MTE nº 433/2025 | 20/03/2025 | Regulamenta atuação dos **agentes operadores** |
+| Portaria MTE nº 434/2025 | 20/03/2025 | Critérios de **habilitação das instituições financeiras** |
+| Portaria MTE nº 435/2025 | 20/03/2025 | Critérios e procedimentos operacionais de consignação em folha |
+| Portaria MTE nº 491/2025 | 31/03/2025 | Altera a 435/2025 |
+| Portaria MTE nº 505/2025 | 03/04/2025 | Altera a 435/2025 |
+| Portaria MTE nº 933/2025 | 05/06/2025 | Altera a 435/2025 |
+| Portaria MTE nº 1.039/2025 | 11/06/2025 | Altera a 434/2025 (habilitação) |
+| Portaria MTE nº 1.131/2025 | 03/07/2025 | Altera regras de autos de infração/multas FGTS (tema correlato) |
+| **Lei nº 15.179/2025** | 24/07/2025 | Atualiza a Lei 10.820/2003 |
+| Portaria MTE nº 1.418/2025 | 21/08/2025 | Adequa a 435/2025 às mudanças da Lei 15.179/2025 |
+| Portaria MTE nº 1.506/2025 | 09/09/2025 | Ajustes complementares decorrentes da Lei 15.179/2025 |
+| **Portaria MTE nº 1.115/2026** | 25/06/2026 | Permite **uso de garantias** (FGTS, multa, verbas rescisórias) — módulo mais recente |
+| Resolução CGCONSIG/MTE nº 3/2026 | 25/06/2026 | Regulamenta a utilização de garantias |
+| Ofícios Circulares SEI nº 875/2025 e 1004/2025 | 2025 | Orientam a **migração automática** de contratos legados para a plataforma |
+
+> **Nota de PM:** a cadência de alterações (7 portarias só em 2025 mexendo na 435) mostra que esse é um produto regulatório em maturação ativa — qualquer roadmap precisa reservar capacidade de time para acompanhar mudanças normativas com frequência mensal/bimestral.
+
+---
+
+## 3. Atores e glossário essencial
+
+| Termo | Definição |
+|---|---|
+| **eSocial** | Sistema de Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas |
+| **CNIS** | Cadastro Nacional de Informações Sociais — base de vínculos e contribuições |
+| **CTPS Digital** | Carteira de Trabalho digital — canal do trabalhador |
+| **DET** | Domicílio Eletrônico Trabalhista — canal oficial de notificação ao empregador |
+| **Portal Emprega Brasil** | Portal onde o empregador consulta dados de consignações |
+| **Modelo Simplificado do eSocial** | Versão do eSocial para domésticos, MEI e pequenas empresas |
+| **FGTS Digital** | Sistema de pagamento/gestão do FGTS |
+| **DAE** | Documento de Arrecadação do eSocial (usado por domésticos) |
+| **Agente operador de consignações** | Papel regulado pela Portaria 433/2025 — quem opera tecnicamente a plataforma (Dataprev) |
+| **Instituição consignatária** | Banco/fintech habilitada a operar no produto |
+| **CBC** | Código Bancário de Compensação — identifica a instituição financeira no sistema |
+
+---
+
+## 4. Fluxo operacional completo
+
+### 4.1 Habilitação da instituição financeira (Portaria 434/2025)
+
+**Etapa 1 — Atualizar Dados** (signatários, feito uma vez): login gov.br prata/ouro → Marketplace Dataprev → "Dados da Conta".
+
+**Etapa 2 — Solicitar Habilitação** (qualquer representante da IF):
+1. Login no Marketplace → card "Crédito do Trabalhador" → "Adicionar em meus pedidos"
+2. Completar dados pessoais e da contratante (CNPJ)
+3. Anexar documentos exigidos (ver lista completa na seção 4.1.1)
+4. Definir vigência do contrato: **60 meses**
+5. Solicitar contratação
+
+**Etapa 3 — Análise do MTE:** confere documentação; rejeição exige novo protocolo.
+
+**Etapa 4 — Assinatura digital** dos signatários da IF e da Dataprev via Marketplace.
+
+**Etapa 5 — Homologação e ativação:** só após **100% dos cenários homologados**, a Dataprev ativa a IF para produção.
+
+#### 4.1.1 Documentação exigida
+- Ato de outorga/procuração do representante legal (se aplicável)
+- Estatuto/contrato social registrado
+- Regularidade fiscal (Fazenda Nacional)
+- CRF do FGTS
+- CNDT (débitos trabalhistas)
+- Certidão de autorização pelo Banco Central
+- Consulta Unicad (código bancário — dispensado para cooperativas singulares)
+- Cadastro ativo em consumidor.gov.br como fornecedor
+- Declaração da conta de repasse (assinatura digital)
+
+### 4.2 Fluxo do trabalhador (CTPS Digital)
+
+```
+1. Acesso ao app CTPS Digital
+2. Simulação + Solicitação de propostas
+3. IFs consultam propostas em aberto (GET /propostas-ctps/solicitacoes-trabalhador)
+4. IF envia oferta (POST /propostas-ctps/inclusao)
+5. Trabalhador recebe e escolhe proposta
+6. IF assume o "Perímetro Seguro" — contato direto com o trabalhador
+7. IF autoriza consulta de dados (POST /trabalhadores/autorizar-consulta-dados-trabalhador)
+8. IF consulta vínculos/dados (GET .../consultar-dados-trabalhador)
+9. Averbação (POST /emprestimos/averbar-consignado-trabalhador)
+```
+
+> **Regra crítica:** a averbação deve ser feita com taxa **igual ou inferior** à ofertada ao trabalhador via CTPS — a plataforma não permite "trocar a taxa" depois que o trabalhador já viu a proposta.
+
+### 4.3 Fluxo de pagamento e repasse (pós-competência)
+1. Dataprev notifica empregadores via **DET** e disponibiliza dados no **Portal Emprega Brasil**
+2. Empresa escritura o desconto no **eSocial** mensalmente
+3. Empresa gera e paga a guia do **FGTS Digital** (rubrica específica)
+4. **Caixa Econômica Federal (CEF)** repassa os valores diretamente às IFs, agrupados por movimento diário (não por contrato individual)
+5. Dataprev concilia e disponibiliza a informação às instituições
+
+---
+
+## 5. Regras de negócio centrais
+
+### 5.1 Cálculo da margem consignável (fórmula oficial, vigente desde 21/04/2025)
+
+Margem = **35% de um "valor base"**, calculado assim:
+
+**➕ Somam-se** rubricas do **tipo 1 (Vencimento)** com incidência tributária em {11, 15, 21, 91, 93, 95, 97} — ver Anexo I abaixo.
+
+**➖ Subtraem-se:**
+- Rubricas do **tipo 2 (Desconto)** com a mesma incidência — ver Anexo II
+- Contribuição Previdenciária (rubrica 9201) e IRPF (rubrica 9203)
+
+O cálculo usa **exclusivamente a última competência disponível no eSocial** — reflete sempre a remuneração mais recente, não uma média histórica.
+
+> **Correção histórica importante:** a metodologia original (lançamento em 21/03/2025) incluía também rubricas do tipo 3 (Informativa) e excluía tipo 4 (Informativa dedutora) — isso podia gerar margem **acima do real**, permitindo concessões superiores ao que o trabalhador de fato tinha disponível. Foi corrigido em 21/04/2025, um mês após o lançamento. **Isso é um caso real de erro de cálculo em produção com impacto financeiro direto — ótimo exemplo de "o que pode dar errado" para citar em entrevista.**
+
+#### Principais rubricas do Anexo I (somadas)
+| Código | Rubrica |
+|---|---|
+| 1000 | Salário/vencimento/soldo |
+| 1201-1216 | Adicionais (função, insalubridade, periculosidade, noturno, tempo de serviço, comissões, penosidade etc.) |
+| 3505/3506/3508 | Pró-labore de diretores/sócios |
+| 6000 | Saldo de salário na rescisão |
+| 4050 | Salário-maternidade |
+
+#### Principais rubricas do Anexo II (subtraídas)
+| Código | Rubrica |
+|---|---|
+| 9207-9212 | Faltas, atrasos e DSR sobre eles |
+| 9213 | Pensão alimentícia |
+| 9218 | Retenções judiciais |
+| 9223/9224 | Previdência complementar / FAPI (parte do empregado) |
+| **9254** | **Empréstimos consignados — Desconto** (importante: já existente antes do Crédito do Trabalhador) |
+| 9260 | FIES — Desconto |
+
+### 5.2 Prazos
+- **96 meses** — CLT, rural, doméstico, diretor não empregado com FGTS
+- **144 meses** — celetistas de empresas públicas, autarquias e sociedades de economia mista
+
+### 5.3 Limite de contratos simultâneos
+**Máximo de 9 contratos ativos/suspensos** por vínculo (parametrizado, sujeito a mudança). Ao atingir o limite, o vínculo permanece elegível mas **não pode simular, solicitar proposta ou contratar** novo empréstimo até encerrar um contrato existente. Consulta via campo `qtdEmprestimosAtivosSuspensos`.
+
+### 5.4 Elegibilidade de vínculo (regras de negação)
+
+| Motivo | Código | Causa |
+|---|---|---|
+| Empréstimo legado no eSocial (rubrica 9254) | 1 | Já existe consignado antigo registrado |
+| Empréstimo legado informado pela IF | 2 | IF já reportou o vínculo como tendo empréstimo legado |
+| Remuneração ≤ zero | 3 | |
+| Vínculo com data de desligamento | 4 | Vínculo inativo |
+| Sem remuneração na última competência | 5 | |
+| Regime trabalhista inválido | 6 | |
+| Vínculo com empréstimo encerrado por término de vínculo anterior | 8 | Ver seção 5.6 |
+| Empregador não participante do programa | 9 | Desde 23/08/2025 — lista de CNPJs públicos excluídos |
+
+**Categorias elegíveis (código eSocial):** 101 (Empregado Geral, inclusive público celetista), 104 (Empregado Doméstico), 721 (Diretor não empregado com FGTS).
+
+### 5.5 Garantias (módulo mais recente — Portaria 1.115/2026)
+
+Desde a implementação de garantias, o trabalhador pode oferecer:
+- **Até 10% do saldo do FGTS** (exceto quem aderiu ao saque-aniversário — este não pode usar saldo, mas pode usar multa e verbas rescisórias)
+- **Até 100% da multa rescisória do FGTS** (40%)
+- **Percentual de verbas rescisórias** — cálculo: `ValorParcela × 0,35 / (MédiaRemuneração × 0,35)`, calculado pela **CAIXA**, não pela Dataprev
+
+#### Regra de cobertura (validada na proposta E na averbação)
+| Tipo de garantia | Cobertura mínima exigida |
+|---|---|
+| Somente verbas rescisórias | ≥ 100% do valor do empréstimo |
+| Com saldo FGTS e/ou multa (± verbas rescisórias) | Exatamente 100% (nem mais, nem menos — tolerância de R$ 0,01) |
+
+**Exemplo oficial (empréstimo de R$ 3.000, margem disponível R$ 1.000):**
+- Só verba rescisória → cobertura 33% → ❌ reprovado
+- Verba rescisória + R$ 2.000 de saldo FGTS → cobertura 100% → ✅ aprovado
+- Verba rescisória + R$ 3.000 de saldo FGTS → cobertura 133% → ❌ reprovado (excedeu)
+
+**Pontos técnicos importantes:**
+- O bloqueio do saldo de garantia é **síncrono** com a averbação — sucesso na averbação garante, sempre, o bloqueio do saldo (não há cenário de averbação OK + bloqueio falho)
+- A execução da garantia só ocorre **em caso de demissão**
+- A execução é limitada ao **valor bloqueado no momento da averbação** — mesmo que o saldo do FGTS aumente depois, não conta
+- Trabalhador **não pode editar** valores de garantia no app — só escolhe "com" ou "sem" garantia
+- Se o trabalhador solicitar com garantia, a IF é obrigada a **enviar duas propostas** (com e sem garantia)
+
+### 5.6 Máquina de estados do empréstimo
+
+| Código | Situação |
+|---|---|
+| 0 | Ativo |
+| 2 | Excluído |
+| 3 | Encerrado (fim natural do prazo) |
+| 8 | Suspenso pelo Banco |
+| 15 | Encerrado por término de vínculo |
+| 16 | Encerrado com renegociação |
+
+**Transições principais:**
+- Averbação → 0 (Ativo)
+- Suspensão → 0 → 8 (desconto para na competência da suspensão até reativação)
+- Virada de competência (chegou na última parcela) → 0 → 3 (Encerrado)
+- Exclusão (falecimento, ação judicial, liquidação antecipada, desistência <15 dias, fraude, outros) → 0 → 2
+- Fim de vínculo empregatício antes da última parcela → 0 → 15 (fica "travado": novos vínculos do CPF ficam **inelegíveis** até o contrato ser renegociado ou excluído)
+- Renegociação de contrato "15" → 16 (gera novo contrato ativo)
+
+### 5.7 Bloqueio do vínculo pelo trabalhador
+Desde 02/12/2025, o trabalhador pode bloquear o próprio vínculo na CTPS Digital, impedindo simulação, proposta e portabilidade. **Contratos já ativos continuam sendo descontados normalmente** mesmo com o vínculo bloqueado.
+
+---
+
+## 6. Calendário operacional
+
+### 6.1 Ciclo mensal (padrão, com AAAA = ano de referência)
+| Competência | Janela de simulação/proposta/gestão de contrato | Dados no Portal/DET | Limite escrituração S-1200 | Pagamento guia FGTS/DAE | Repasse CEF |
+|---|---|---|---|---|---|
+| Ex.: mai/AAAA | 21/03 a 20/04 | 21/04 (DET: 21-25/04) | 01/05 a 15/06 | Até 20/06 | Até 23/06 (D+2) |
+
+*(O padrão se repete mensalmente — a janela de operação de um mês sempre é "dia 21 do mês N-2 até dia 20 do mês N-1", fechando um mês antes do desconto em folha.)*
+
+### 6.2 Janela de suspensão técnica (virada de competência)
+**Todo dia 20, às 22h, até o dia 23, às 06h (horário de Brasília)** — TODOS os serviços de alteração/averbação/exclusão/portabilidade/refinanciamento ficam **indisponíveis** (erro "OZ"). Apenas consultas seguem ativas fora desse padrão específico.
+
+> **Implicação de produto:** qualquer SLA de contratação precisa considerar essa janela recorrente de ~32h por mês em que a plataforma não aceita novas operações — é um blecaute operacional previsível que precisa estar no desenho de UX (ex.: avisar o usuário, ou enfileirar operações para depois da janela).
+
+### 6.3 Regra de competência × desconto (ponto sutil)
+- Se um contrato é averbado **e** excluído **na mesma competência**: não gera nenhuma notificação/desconto
+- Se averbado em uma competência e excluído em outra: os descontos das competências **anteriores à exclusão já são cobrados normalmente** — a IF precisa projetar o que ainda vai receber antes de excluir
+
+---
+
+## 7. Sistemas, APIs e integração técnica
+
+### 7.1 Portais de acesso
+| Ambiente | Portal de Operações | Marketplace (APIs) |
+|---|---|---|
+| Homologação | hecoportal.hom.dataprev.gov.br | hstore.dataprev.gov.br/devportal |
+| Produção | ecoportal.dataprev.gov.br | devportal.dataprev.gov.br |
+
+### 7.2 Autenticação
+- **API:** Token via Consumer Key/Secret (Marketplace) + Certificado Digital A1 em nome do CNPJ matriz + TLS 1.2+ com cadeia ICP-Brasil da Dataprev na truststore
+- **Portal Web:** e-CPF
+- **Limite técnico:** 25 requisições/segundo por aplicação (recomenda-se 1 aplicação por IF)
+
+### 7.3 Principais endpoints (tabela reduzida — 20 operações no total)
+| Operação | Método | Endpoint | Horário |
+|---|---|---|---|
+| Averbação de Empréstimo | POST | `/emprestimos/averbar-consignado-trabalhador` | 06h–22h |
+| Alterar Empréstimo | POST | `/emprestimos/alterar-consignado-trabalhador` | 06h–22h |
+| Excluir Consignado | PUT | `/emprestimos/excluir-consignado-trabalhador` | 06h–22h |
+| Suspender/Reativar Empréstimo | PUT | `/emprestimos/suspender-` ou `reativar-consignado-trabalhador` | 06h–22h |
+| Renegociação | POST | `/emprestimos/renegociar-consignado-trabalhador` | 06h–22h |
+| Autorizar Consulta de Dados | POST | `/trabalhadores/autorizar-consulta-dados-trabalhador` | 24h |
+| Consultar Dados do Trabalhador | GET | `/trabalhadores/consultar-dados-trabalhador` | 24h |
+| Consultar Calendário | GET | `/emprestimos/consultar-calendario-trabalhador` | 24h |
+| Consultar Repasse de Pagamentos | GET | `/emprestimos/consultar-repasse-pagamentos` | 24h |
+| Consultar Escriturações eSocial | GET | `/emprestimos/consultar-escrituracoes-remuneracoes` | 24h |
+| Realizar Proposta via CTPS | POST | `/propostas-ctps/inclusao` | 24h |
+| Tombamento Compulsório | POST | `/emprestimos/tombamento-compulsorio` | 24h |
+
+> **Nota:** mesmo operações listadas como "24h" têm o ANS contratual oficial de 06h-22h; o funcionamento estendido foi uma exceção liberada por demanda operacional das IFs.
+
+### 7.4 Manuais de comunicação (documentação técnica oficial, 17 documentos)
+001-Leilão de propostas · 002-Autorização/Consulta/FGTS · 003-Gestão de consignações · 004-Contrato · 005-Calendário/Empréstimos/Escriturações/Repasses · 006-Renegociação · 007-Empréstimos Legados · 008-Refinanciamento/Portabilidade · 009-Troca de Titularidade · 010-Tombamento Compulsório · 011-Propostas de Portabilidade · 012-Consulta de Arquivos · 013-Antecipação de Parcelas · 014-Perfis de Acesso · 015-Inclusão de Saldo Devedor · 016-Anexos · 017-Gestão de Garantias
+
+### 7.5 Backlog (em desenvolvimento à época do lançamento)
+- Portabilidade entre instituições financeiras (evoluiu de backlog para operação real)
+- Refinanciamento de prazos e valores
+- Troca de titularidade do contrato
+
+---
+
+## 8. Escrituração e repasse — pontos operacionais críticos (FAQ oficial)
+
+- **Escrituração com dados errados é possível** — o eSocial tem alertas, mas **não bloqueia**. Responsabilidade é 100% do empregador, sujeito a penalidades.
+- **Escriturar valor diferente do averbado também é tecnicamente possível** — mesma responsabilidade do empregador.
+- **Pagamento duplicado da mesma guia é possível** — o repasse ocorre em duplicidade também; a devolução deve ser resolvida diretamente entre empregador e instituição consignatária, **sem intervenção da CAIXA**.
+- **Repasse ocorre em D+2** após o pagamento da guia pelo empregador. Prazo do consignado mensal: até dia 20. Rescisório: até 10 dias após a rescisão (pode passar do dia 20).
+- **Repasses da CAIXA são agrupados por movimento diário, não por contrato** — a conciliação exige cruzar CPF + empregador nos arquivos de escrituração, não dá para rastrear 1:1 pelo valor do TED.
+- **Atualização obrigatória do saldo devedor (Portaria 1.115/2026):** toda instituição consignatária deve informar saldo devedor de **todas** as operações vigentes após cada evento de amortização (regular, parcial, antecipada) e, na ausência de movimentação, até o último dia útil do mês. **Não informar ou informar incorretamente sujeita a suspensão ou cancelamento da habilitação da IF** — é a penalidade mais severa documentada no produto.
+
+---
+
+## 9. Perguntas de PM para se antecipar (baseadas em problemas reais e documentados)
+
+- Como o produto lida com a **janela recorrente de suspensão técnica** (20h22-23h06, todo mês) no desenho de UX e SLA de contratação?
+- Como o time de risco monitora **erros de escrituração não bloqueados pelo eSocial** — já que o sistema aceita valores errados e a responsabilidade recai sobre o empregador, isso é uma fonte estrutural de divergência que precisa de reconciliação constante?
+- Qual o plano de contingência para o **erro histórico de cálculo de margem** (metodologia incorreta por 1 mês em 2025) se acontecer de novo — como o produto identificaria rapidamente que a margem calculada está sistematicamente errada?
+- Como a IF trata um **vínculo "encerrado por término de vínculo" (situação 15)** que trava novos contratos até renegociação — isso pode gerar atrito de suporte quando o trabalhador é recontratado e não entende por que não consegue novo crédito?
+- Como o produto de garantias (novo, desde 2026) muda o **funil de conversão** — a exigência de cobertura de exatamente 100% (nem mais, nem menos) é uma regra rígida que pode gerar bastante recusa por descasamento de centavos?
+
+---
+
+## Fontes
+- docs.dataprev.gov.br — Crédito Trabalhador (seções: Habilitação, Fluxo Operacional, Calendário Operacional, FAQ completo, Cronograma e Versões, Serviços e Grade de Horário)
+- gov.br/trabalho-e-emprego — Tutorial e Manual de Orientação do Empregador
+- Portarias MTE 433 a 1.506/2025, 1.115/2026; Resolução CGCONSIG nº 3/2026
+- Lei 10.820/2003, Lei 15.179/2025, MP 1.292/2025
