@@ -1,75 +1,760 @@
-Definição do problema
+# Case de Produto — Crédito do Trabalhador
 
-  O problema deve apresentar:
+**Tema:** redução do abandono após a escolha da oferta no fluxo do consignado via CTPS Digital  
+**Autora:** Aeviles Aguiar  
+**Área:** Product Management  
+**Versão:** 1.0 — agosto de 2026
 
-Quem é afetado;
-Em qual contexto;
-Qual dificuldade enfrenta;
-Qual o impacto para o cliente;
-Qual o impacto para o negócio;
-Quais evidências sustentam a afirmação.
+> [!IMPORTANT]
+> Este é um **case hipotético de Produto** construído com informações públicas e com o mapeamento inicial da jornada As-Is. Números de funil, entrevistas, falas e resultados de experimentos são **simulados para fins didáticos**. Antes de qualquer decisão real, as hipóteses devem ser validadas com usuários, dados internos, áreas de risco, jurídico, segurança, operações e tecnologia.
 
-  Template de Problem Statement
+---
 
-[Usuário], ao tentar [realizar uma tarefa], encontra [dificuldade], principalmente em [momento da jornada]. Isso provoca [impacto para o usuário] e gera [impacto para o negócio]. Identificamos esse problema por meio de [dados e evidências].
+## 1. Resumo executivo
 
-Primeira versão para o seu case
+O Crédito do Trabalhador permite que pessoas com vínculo empregatício tenham acesso a ofertas de crédito consignado com desconto em folha. A jornada oferece autonomia e comparação de propostas, mas pode perder continuidade depois que o trabalhador escolhe uma oferta e precisa seguir para o ambiente da instituição financeira.
 
-Como ainda não temos dados reais, é importante apresentar como hipótese de problema:
+O problema priorizado neste case é o **abandono entre a escolha da oferta e a conclusão da contratação**. A hipótese central é que a combinação de troca de canal, dificuldade de reconhecer o contato oficial, demora, repetição de dados, novas validações e falta de status reduz a confiança e aumenta o esforço do cliente.
 
-Trabalhadores que escolhem uma proposta de consignado na CTPS Digital podem encontrar dificuldades para concluir a contratação após serem direcionados ao canal da instituição financeira. A mudança de ambiente, a demora no contato, o medo de fraude e a repetição de autorizações e validações podem aumentar o abandono entre a escolha da proposta e a liberação do crédito. Para a instituição financeira, isso representa perda de leads qualificados, redução da conversão e aumento do custo operacional.
+A proposta de MVP não tenta redesenhar todo o ecossistema. Ela busca tornar a transição mais reconhecível e mensurável por meio de:
 
-  3. Evidências necessárias para validar o problema
+- confirmação clara da escolha;
+- identificação da instituição financeira;
+- protocolo verificável;
+- canal oficial e próximo passo visível;
+- prazo esperado para contato;
+- acompanhamento básico do status;
+- instrumentação dos eventos do funil.
 
-Dados do funil
+O sucesso deve ser medido principalmente pela **conversão da etapa 5 para a etapa 9**, acompanhada de métricas diagnósticas e guardrails de fraude, risco de crédito, segurança e conformidade.
 
-Levantar:
+---
 
-Quantidade de propostas escolhidas na etapa 5;
-Quantidade de clientes que chegaram ao canal da IF;
-Quantidade de autorizações concluídas;
-Quantidade de validações concluídas;
-Quantidade de propostas aprovadas;
-Quantidade de contratos averbados;
-Quantidade de créditos liberados;
-Drop-off entre cada etapa;
-Tempo de permanência em cada etapa;
-Time to Cash;
-Motivos de recusa e abandono.
-Dados de experiência
+## 2. Contexto do Crédito do Trabalhador
 
-Investigar:
+O programa utiliza a infraestrutura digital do governo para conectar trabalhadores e instituições financeiras. Conforme informações oficiais do Ministério do Trabalho e Emprego:
 
-Reclamações sobre contatos suspeitos;
-Dificuldade para identificar o canal oficial;
-Falhas de biometria;
-Dúvidas sobre CET, parcelas e condições;
-Repetição de informações;
-Dificuldade para acompanhar a proposta;
-Contatos realizados na central de atendimento.
+- o público potencial supera **47 milhões de trabalhadores assalariados com carteira assinada**;
+- após autorizar o acesso aos dados, o trabalhador pode receber propostas em até **24 horas**;
+- a margem consignável informada é de até **35% do salário** para pagamento das parcelas;
+- a contratação também pode começar nos canais das instituições financeiras participantes;
+- a base legal do programa foi consolidada pela Lei nº 15.179/2025.
 
+Esses dados demonstram a escala potencial do produto. Em uma jornada de grande volume, pequenas rupturas de conversão podem representar impacto relevante para clientes, instituições financeiras e operação.
 
-  Dados técnicos e operacionais
+### Objetivo do case
 
-Verificar:
+Demonstrar como uma Product Manager estruturaria a investigação e a evolução da jornada, conectando:
 
-Tempo para a IF receber a escolha;
-Tempo para o primeiro contato;
-Erros nas APIs;
-Timeouts e indisponibilidades;
-Falhas de autenticação;
-Instabilidades de Dataprev/Serpro;
-Propostas paradas ou expiradas;
-Taxa de sucesso na averbação.
-Pesquisa com usuários
+- necessidade do cliente;
+- resultado de negócio;
+- risco e conformidade;
+- dados e métricas;
+- viabilidade técnica e operacional;
+- aprendizado por experimentação.
 
-Perguntas importantes:
+---
 
-O que você imaginava que aconteceria depois de escolher a proposta?
-Você entendeu que precisaria continuar em outro canal?
-Como identificou que o contato da instituição era verdadeiro?
-Em algum momento pensou que poderia ser golpe?
-Qual etapa foi mais difícil?
-Precisou informar novamente algum dado?
-Conseguiu acompanhar o andamento da proposta?
-O que faria você desistir da contratação?
+## 3. Cliente, problema e necessidade
+
+### Cliente principal
+
+Trabalhador elegível ao Crédito do Trabalhador que deseja comparar ofertas e contratar crédito de forma segura, rápida e transparente.
+
+### Job to Be Done
+
+> Quando escolho uma oferta de crédito, quero concluir a contratação com segurança e previsibilidade, para receber o dinheiro sem repetir etapas nem ter medo de fraude.
+
+### Necessidades funcionais
+
+- entender as condições da proposta;
+- reconhecer qual instituição dará continuidade ao processo;
+- saber o que acontecerá em seguida;
+- concluir autenticação, validação e contratação;
+- acompanhar pendências e status;
+- receber o crédito e o contrato.
+
+### Necessidades emocionais
+
+- sentir que está falando com a instituição correta;
+- confiar que seus dados estão protegidos;
+- não se sentir enganado ou pressionado;
+- manter a sensação de controle iniciada na comparação das ofertas.
+
+### Necessidades de negócio
+
+- aumentar a conversão de leads qualificados;
+- reduzir propostas paradas e contatos no atendimento;
+- preservar qualidade de crédito, segurança e conformidade;
+- entender em qual etapa e por qual razão ocorre o abandono.
+
+---
+
+## 4. Atores e ecossistema
+
+```mermaid
+flowchart TD
+    T[Trabalhador]
+    C[CTPS Digital / MTE]
+    IF[Instituição financeira]
+    E[Empregador / eSocial]
+    D[Dataprev / Serpro]
+    R[Risco, fraude e compliance]
+    O[Atendimento e operações]
+
+    C --> T
+    IF --> T
+    E --> T
+    D --> T
+    R --> T
+    O --> T
+```
+
+| Ator | Papel no ecossistema | Pergunta que o PM precisa esclarecer |
+|---|---|---|
+| Trabalhador | Compara, escolhe, autoriza e contrata | Onde perde confiança ou encontra esforço excessivo? |
+| CTPS Digital / MTE | Canal oficial e acesso ao programa | Quais dados e mensagens podem acompanhar a transição? |
+| Instituição financeira | Oferta, análise, formalização e liberação | Qual é o SLA e o fluxo após a escolha? |
+| Empregador / eSocial | Informações de vínculo e desconto em folha | Quais eventos afetam elegibilidade e averbação? |
+| Dataprev / Serpro | Processamento e integrações do ecossistema | Quais indisponibilidades, timeouts e retornos existem? |
+| Risco, fraude e compliance | Proteção, prevenção e conformidade | Quais controles são obrigatórios e quais podem ser simplificados? |
+| Atendimento e operações | Tratamento de dúvidas e exceções | Quais motivos geram contato, retrabalho e abandono? |
+
+**Framework:** mapa de ecossistema  
+**Ferramentas sugeridas:** Miro, Draw.io, Confluence
+
+---
+
+## 5. Plano de trabalho — como o case seria conduzido
+
+| Momento | Atividade | Entregável | Framework | Ferramentas |
+|---|---|---|---|---|
+| Dia 1 | Alinhamento do objetivo e dos guardrails | Product brief | Problem Framing | Miro, Confluence |
+| Dias 1–2 | Desk research e regras do programa | Mapa de evidências | Desk Research | Sites oficiais, Confluence |
+| Dias 2–4 | Jornada, ecossistema e funil atual | As-Is e tracking plan inicial | Journey Map, Funnel Analysis | Miro, Power BI |
+| Dias 3–6 | Entrevistas com clientes e stakeholders | Notas, padrões e oportunidades | JTBD, entrevista semiestruturada | Forms, Meet, Miro |
+| Dias 5–7 | Análise de causas e problema priorizado | Árvore de problemas | 5 Porquês | Miro |
+| Dias 7–8 | Ideação e árvore de oportunidades | OST e hipóteses | Opportunity Solution Tree | Miro |
+| Dias 8–9 | Priorização e definição do MVP | Escopo e critérios | RICE, Impacto × Esforço | Planilha, Miro |
+| Dias 9–11 | Prototipação e teste | Protótipo e relatório de teste | Teste de usabilidade | Figma |
+| Dias 11–12 | Plano de experimento e roadmap | Experiment card e Now/Next/Later | Experiment Design | Power BI, Jira |
+
+### Double Diamond aplicado
+
+```mermaid
+flowchart LR
+    A[Descobrir<br/>pesquisa e dados] --> B[Definir<br/>problema e causas]
+    B --> C[Desenvolver<br/>hipóteses e protótipo]
+    C --> D[Entregar<br/>MVP e experimento]
+```
+
+---
+
+## 6. Plano de pesquisa
+
+### Objetivos
+
+1. Entender como o trabalhador interpreta a saída da CTPS Digital.
+2. Identificar o que gera confiança ou suspeita no contato da instituição.
+3. Medir o esforço provocado por autenticação, repetição de dados e espera.
+4. Mapear causas operacionais e técnicas de propostas paradas.
+5. Diferenciar abandono voluntário, reprovação, falha técnica e perda operacional.
+
+### Métodos
+
+| Frente | Método | Participantes ou fonte | Resultado esperado |
+|---|---|---|---|
+| Comportamento | Entrevistas com clientes que concluíram | 5 a 8 clientes | Fatores de confiança e fluidez |
+| Abandono | Entrevistas com clientes que não concluíram | 5 a 8 clientes | Barreiras, medos e gatilhos de desistência |
+| Operação | Entrevistas com atendimento e backoffice | 4 a 6 profissionais | Motivos de contato, filas e retrabalho |
+| Tecnologia | Conversas com arquitetura e engenharia | 3 a 5 profissionais | Integrações, timeout, logs e limitações |
+| Quantitativo | Análise de eventos e coortes | Funil por canal, IF e período | Localização e dimensão da perda |
+| Usabilidade | Teste do handoff e tracker | 5 usuários por rodada | Compreensão e capacidade de conclusão |
+
+### Roteiro de entrevista com o trabalhador
+
+1. Conte como você chegou até a oferta de crédito.
+2. O que fez você escolher aquela proposta?
+3. O que esperava que acontecesse logo após a escolha?
+4. Como soube que o contato seguinte era realmente do banco?
+5. Em algum momento você pensou que poderia ser golpe? Por quê?
+6. Quais informações precisou fornecer novamente?
+7. Houve falha de biometria, token ou carregamento?
+8. Você sabia o status e o próximo passo da proposta?
+9. O que quase fez você desistir?
+10. O que teria tornado a experiência mais segura e simples?
+
+### Registro de evidências
+
+| Evidência | Origem | Situação | Decisão permitida |
+|---|---|---|---|
+| Regras e canais publicados | Fonte oficial | Confirmada | Descrever contexto e restrições |
+| Dores da jornada inicial | Mapeamento do case | Hipótese | Planejar pesquisa |
+| Taxa de conversão por etapa | Analytics interno | Necessária | Dimensionar o problema |
+| Causas de abandono | Pesquisa + operação | Necessária | Priorizar oportunidade |
+| Viabilidade de reuso de dados | Arquitetura, jurídico e segurança | Necessária | Definir solução |
+
+---
+
+## 7. Simulação da pesquisa
+
+> [!WARNING]
+> As falas abaixo são **simuladas**. Elas mostram como os achados poderiam ser sintetizados, mas não representam entrevistas reais.
+
+### Falas ilustrativas
+
+> “Quando saí do aplicativo do governo, não sabia se a mensagem do banco era verdadeira.”
+
+> “Eu já tinha autorizado na CTPS. Não entendi por que precisava liberar tudo novamente.”
+
+> “Esperei pelo contato e não sabia se a proposta ainda estava válida.”
+
+> “A biometria falhou. Fechei a tela e depois não encontrei onde continuar.”
+
+### Padrões hipotéticos a validar
+
+| Padrão | Evidência necessária | Possível oportunidade |
+|---|---|---|
+| Falta de confiança no novo canal | Entrevistas e abandono por origem | Protocolo e canal verificáveis |
+| Espera sem previsão | Tempo até o primeiro contato | SLA visível e automação |
+| Repetição de informações | Mapeamento de campos e permissões | Pré-preenchimento e continuidade de contexto |
+| Falha sem recuperação | Logs de biometria e retorno | Retentativa, fallback e retomada |
+| Falta de visibilidade | Contatos e aging das propostas | Tracker e próxima ação clara |
+
+---
+
+## 8. Jornada As-Is
+
+```mermaid
+flowchart TD
+    A[1. Acesso à CTPS Digital] --> B[2. Solicitação da proposta]
+    B --> C[3. Consulta pelas IFs]
+    C --> D[4. Recebimento das ofertas]
+    D --> E[5. Escolha da proposta]
+    E --> F[6. Mudança para o canal da IF]
+    F --> G[7. Nova autorização]
+    G --> H[8. Validação de vínculo e identidade]
+    H --> I[9. Averbação e liberação]
+
+    style E fill:#e8f5ed,stroke:#238b57,stroke-width:2px
+    style F fill:#fff0f3,stroke:#d90435,stroke-width:3px
+    style G fill:#fff0f3,stroke:#d90435
+    style H fill:#fff0f3,stroke:#d90435
+    style I fill:#e8f5ed,stroke:#238b57,stroke-width:2px
+```
+
+| Etapa | Ação | Possível fricção | Satisfação esperada | Métrica aplicável |
+|---|---|---|---|---|
+| 1–2 | Acesso e solicitação | Instabilidade e margem pouco clara | Médio-alta | início, erro, conclusão da solicitação |
+| 3–4 | Consulta e ofertas | Espera e taxas pouco personalizadas | Neutra | tempo da oferta, quantidade de ofertas |
+| 5 | Escolha | Comparação insuficiente de CET, prazo e parcela | Máxima | escolha por proposta exibida |
+| 6 | Mudança de canal | Medo de fraude e quebra de contexto | Queda drástica | sucesso do handoff, tempo até contato |
+| 7–8 | Autorização e validação | Repetição, biometria e token | Baixa | autorização, sucesso biométrico, retomada |
+| 9 | Averbação e liberação | Margem, processamento ou recusa | Alta quando concluída | averbação, liberação e tempo total |
+
+### Momento de maior satisfação
+
+**Etapa 5 — escolha da proposta:** o trabalhador percebe autonomia, transparência e competição entre instituições.
+
+### Momento crítico
+
+**Etapas 6 a 8 — transição e validação:** a confiança criada no ambiente oficial pode ser perdida durante a mudança de canal.
+
+---
+
+## 9. Funil e drop-off
+
+**Drop-off** é o abandono de um processo antes de sua conclusão. Neste case, o funil principal começa quando a oferta é escolhida e termina quando o crédito é liberado.
+
+### Cenário didático — dados simulados
+
+| Etapa | Usuários | Conversão da etapa | Drop-off da etapa |
+|---|---:|---:|---:|
+| Oferta escolhida | 1.000 | — | — |
+| Chegou ao canal da IF | 900 | 90,0% | 10,0% |
+| Concluiu autorização | 780 | 86,7% | 13,3% |
+| Foi aprovado | 700 | 89,7% | 10,3% |
+| Crédito liberado | 600 | 85,7% | 14,3% |
+
+**Conversão acumulada:** 600 ÷ 1.000 = **60%**  
+**Drop-off acumulado:** 400 ÷ 1.000 = **40%**
+
+> Os valores acima são apenas um exemplo. O baseline real deve ser segmentado por canal, instituição financeira, perfil, dispositivo, versão do aplicativo, período e motivo de saída.
+
+### Taxonomia necessária
+
+O PM não deve tratar toda perda como abandono. É necessário separar:
+
+- desistência voluntária;
+- contato não iniciado;
+- falha técnica;
+- falha de autenticação;
+- reprovação de crédito;
+- ausência de margem;
+- expiração da proposta;
+- inconsistência de vínculo;
+- indisponibilidade de integração;
+- conclusão por outro canal.
+
+---
+
+## 10. Métricas do produto
+
+### North Star operacional do case
+
+**Conversão da oferta escolhida para crédito liberado — etapa 5 → etapa 9.**
+
+### Métricas por etapa
+
+| Trecho | Métrica | O que responde |
+|---|---|---|
+| 1 → 2 | taxa de conclusão da solicitação | O cliente consegue iniciar e pedir propostas? |
+| 2 → 4 | tempo e taxa de recebimento de ofertas | As IFs respondem dentro da expectativa? |
+| 4 → 5 | taxa de escolha | As propostas são compreensíveis e competitivas? |
+| 5 → 6 | sucesso do handoff | O cliente consegue entrar no canal correto? |
+| 6 → 7 | tempo até primeiro contato | A espera reduz o início da contratação? |
+| 7 → 8 | conclusão da autorização e validação | Onde autenticação e burocracia impedem avanço? |
+| 8 → 9 | aprovação, averbação e liberação | Quantos contratos saudáveis são concluídos? |
+
+### Métricas de experiência
+
+- **CES:** esforço para continuar e concluir a contratação;
+- **CSAT:** satisfação após etapas críticas;
+- taxa de retomada após falha;
+- quantidade de contatos no atendimento;
+- reclamações por falta de status ou suspeita de fraude.
+
+### Métricas operacionais e técnicas
+
+- SLA até o primeiro contato;
+- aging das propostas por status;
+- taxa de erro e timeout por integração;
+- sucesso da biometria;
+- tempo de resposta dos serviços;
+- quantidade de retentativas;
+- propostas sem atualização acima do limite.
+
+### Guardrails
+
+- fraude;
+- inadimplência;
+- aprovação fora de política;
+- contestação;
+- incidente de segurança;
+- reclamação regulatória;
+- uso indevido de dados;
+- impacto no atendimento.
+
+---
+
+## 11. Evidências disponíveis e dados necessários
+
+### Já disponível
+
+- fluxo As-Is e dores inicialmente mapeadas;
+- regras públicas do programa;
+- hipótese de ruptura após a escolha;
+- visão inicial de atores e dependências.
+
+### Ainda necessário
+
+- conversão real por etapa e canal;
+- tempo entre escolha, contato, autorização, validação e averbação;
+- motivos de abandono, recusa e falha;
+- volume e motivo de contatos no atendimento;
+- logs de biometria, timeout, retentativa e integração;
+- entrevistas com clientes que concluíram e abandonaram;
+- validação jurídica, de segurança, risco e arquitetura.
+
+### Regra de decisão
+
+O problema deve permanecer descrito como **hipótese** até que funil, pesquisa e operação confirmem a dimensão e as causas.
+
+---
+
+## 12. Problema priorizado
+
+> Trabalhadores que escolhem uma proposta podem encontrar dificuldade para concluir a contratação após a mudança para o canal da instituição financeira, provocando insegurança, esforço, perda de leads qualificados, menor conversão e aumento do custo operacional.
+
+### Recorte
+
+- **Público:** trabalhadores que escolheram uma oferta;
+- **Momento:** transição entre CTPS Digital e instituição financeira;
+- **Comportamento:** não iniciam ou não concluem a contratação;
+- **Impacto no cliente:** insegurança, repetição, espera e falta de status;
+- **Impacto no negócio:** perda de conversão e aumento de retrabalho;
+- **Restrições:** segurança, risco de crédito, LGPD, regulação e integrações.
+
+**Framework:** Problem Statement  
+**Ferramentas sugeridas:** Miro, Confluence
+
+---
+
+## 13. Causas-raiz
+
+```mermaid
+flowchart LR
+    C1[Canal<br/>troca brusca e contato difícil de reconhecer] --> P[Abandono após a escolha]
+    C2[Operação<br/>demora para iniciar] --> P
+    C3[Experiência<br/>dados e autorizações repetidos] --> P
+    C4[Tecnologia<br/>biometria, timeout e integrações] --> P
+
+    P --> R1[Cliente<br/>insegurança e esforço]
+    P --> R2[Negócio<br/>conversão menor]
+    P --> R3[Operação<br/>mais contatos e retrabalho]
+    P --> R4[Risco<br/>recusas e perda de confiança]
+```
+
+### Aplicação dos 5 Porquês — exemplo hipotético
+
+1. **Por que o cliente abandona?** Porque não inicia ou não conclui o processo na IF.
+2. **Por que não inicia?** Porque não reconhece o contato ou não sabe o próximo passo.
+3. **Por que não reconhece?** Porque a mudança de canal não preserva contexto suficiente.
+4. **Por que o contexto não é preservado?** Porque os sistemas e comunicações são tratados como jornadas separadas.
+5. **Por que são jornadas separadas?** Porque integrações, responsabilidades e métricas de ponta a ponta ainda precisam ser alinhadas.
+
+Essa cadeia é uma hipótese. Cada resposta deve ser sustentada por evidência.
+
+---
+
+## 14. Pergunta “Como poderíamos?”
+
+> **Como poderíamos garantir uma transição segura, rápida e transparente entre a CTPS Digital e a instituição financeira, reduzindo esforço e abandono sem aumentar fraude, risco de crédito ou não conformidade?**
+
+### Princípios de design
+
+1. Confiança verificável.
+2. Próximo passo visível.
+3. Menos repetição.
+4. Falha recuperável.
+5. Segurança e privacidade desde a concepção.
+
+---
+
+## 15. Árvore de oportunidades
+
+```mermaid
+flowchart TD
+    O[Resultado: aumentar conversão 5 → 9]
+    O --> A[Confiar no contato]
+    O --> B[Receber resposta rapidamente]
+    O --> C[Evitar repetição]
+    O --> D[Recuperar falhas]
+    O --> E[Acompanhar status]
+
+    A --> A1[Protocolo verificável]
+    B --> B1[SLA visível e automação]
+    C --> C1[Pré-preenchimento]
+    D --> D1[Retomada e fallback]
+    E --> E1[Tracker da proposta]
+```
+
+**Framework:** Opportunity Solution Tree  
+**Ferramentas sugeridas:** Miro, Productboard
+
+---
+
+## 16. Hipóteses de solução
+
+| Hipótese | Formulação | Métrica principal |
+|---|---|---|
+| H1 — Confiança | Se o cliente reconhecer oficialmente o próximo canal, o abandono no handoff deve cair. | sucesso 5 → 6 |
+| H2 — Velocidade | Se o primeiro contato ocorrer dentro de um SLA curto, mais clientes iniciarão a contratação. | tempo de contato e conversão 6 → 7 |
+| H3 — Continuidade | Se dados e contexto acompanharem a transição, esforço e retrabalho devem diminuir. | CES e conclusão 7 → 8 |
+| H4 — Visibilidade | Se status e próxima ação forem claros, propostas paradas e contatos devem cair. | aging e contatos |
+| H5 — Recuperação | Se a falha permitir retomada simples, mais clientes concluirão a validação. | recuperação e conclusão 8 → 9 |
+
+---
+
+## 17. Priorização
+
+### Critérios
+
+- impacto no cliente;
+- impacto no negócio;
+- confiança na evidência;
+- esforço técnico e operacional;
+- dependência externa;
+- risco regulatório e de segurança;
+- velocidade de aprendizado.
+
+### Exemplo de RICE — pontuação ilustrativa
+
+| Iniciativa | Reach | Impact | Confidence | Effort | RICE aproximado | Leitura |
+|---|---:|---:|---:|---:|---:|---|
+| Próximos passos + canal oficial | 8 | 3,0 | 80% | 2 | 9,6 | testar primeiro |
+| SLA e comunicação automática | 7 | 2,5 | 75% | 2 | 6,6 | alta prioridade |
+| Tracker básico | 6 | 2,0 | 70% | 3 | 2,8 | próximo ciclo |
+| Pré-preenchimento | 6 | 3,0 | 60% | 6 | 1,8 | depende de viabilidade |
+| Reuso de consentimento | 5 | 3,0 | 50% | 8 | 0,9 | dependência estrutural |
+
+> As notas são didáticas. A pontuação real deve ser construída com Produto, Design, Engenharia, Operações, Risco, Segurança e Jurídico.
+
+---
+
+## 18. MVP
+
+### Entra no MVP
+
+- confirmação da oferta escolhida;
+- identificação clara da instituição;
+- resumo das condições principais;
+- protocolo verificável;
+- próximo passo e canal oficial;
+- prazo esperado para contato;
+- status básico da proposta;
+- eventos de analytics e motivos de saída;
+- tratamento de erro e rota de retomada.
+
+### Não entra no MVP
+
+- mudança estrutural na CTPS Digital;
+- novo motor de crédito;
+- revisão das regras de averbação;
+- reuso integral de identidade e consentimento;
+- integrações multiorganização de ponta a ponta;
+- personalização avançada de ofertas.
+
+### Critérios de sucesso do MVP
+
+- aumento da taxa de início no canal da IF;
+- redução do tempo entre escolha e primeiro contato;
+- aumento da conclusão da autorização;
+- redução de contatos sobre status e suspeita de fraude;
+- ausência de deterioração dos guardrails.
+
+---
+
+## 19. Jornada To-Be
+
+```mermaid
+flowchart LR
+    A[1. Escolha confirmada<br/>resumo e protocolo] --> B[2. Canal verificado<br/>rota oficial]
+    B --> C[3. Contato previsível<br/>prazo e SLA]
+    C --> D[4. Validação guiada<br/>contexto preservado]
+    D --> E[5. Status contínuo<br/>pendências e progresso]
+    E --> F[6. Crédito liberado<br/>confirmação e contrato]
+
+    style A fill:#e8f5ed,stroke:#238b57,stroke-width:2px
+    style F fill:#e8f5ed,stroke:#238b57,stroke-width:2px
+```
+
+### Mudança central
+
+A transição deixa de ser uma saída abrupta e passa a ser uma continuidade reconhecível, mensurável e recuperável.
+
+---
+
+## 20. Protótipo conceitual
+
+### Tela 1 — Oferta escolhida
+
+- instituição confirmada;
+- resumo de parcela, prazo, taxa e CET;
+- protocolo da proposta;
+- aviso sobre o canal oficial;
+- ação “Continuar”.
+
+### Tela 2 — Próximo passo
+
+- prazo estimado para contato;
+- canal que será utilizado;
+- orientação antifraude;
+- informações que poderão ser solicitadas;
+- rota alternativa se o contato não ocorrer.
+
+### Tela 3 — Acompanhamento
+
+- proposta escolhida;
+- validação em andamento;
+- pendência do cliente, quando houver;
+- averbação;
+- crédito liberado;
+- ação para retomar ou pedir ajuda.
+
+### Teste de usabilidade
+
+**Tarefa:** “Você escolheu uma oferta. Mostre como confirmaria que o contato é legítimo, continuaria a contratação e verificaria o status.”
+
+**Observar:**
+
+- compreensão do canal e do protocolo;
+- capacidade de localizar o próximo passo;
+- hesitação e dúvidas;
+- percepção de segurança;
+- tempo e sucesso da tarefa;
+- expectativa sobre prazo e comunicação.
+
+---
+
+## 21. Plano de experimentação
+
+### Experiment Card
+
+| Campo | Definição |
+|---|---|
+| Hipótese | Uma transição verificável, com canal e próximos passos claros, aumenta o início da contratação na IF. |
+| Público | Clientes que escolheram uma proposta elegível ao experimento. |
+| Controle | Experiência atual. |
+| Variante | Confirmação, protocolo, canal verificado, prazo e status básico. |
+| Métrica primária | Conversão 5 → 6 e, posteriormente, 5 → 9. |
+| Métricas secundárias | tempo de contato, autorização, CES, contatos e retomada. |
+| Guardrails | fraude, recusa, inadimplência, incidente, contestação e reclamação. |
+| Duração | Definida após volume, baseline e cálculo amostral. |
+| Decisão | expandir, iterar ou interromper conforme efeito e guardrails. |
+
+### Tracking plan mínimo
+
+| Evento | Momento | Propriedades importantes |
+|---|---|---|
+| `offer_selected` | escolha confirmada | IF, canal, produto, prazo, faixa de valor |
+| `handoff_presented` | orientação exibida | rota, protocolo, prazo informado |
+| `handoff_started` | saída para a IF | canal, deep link, dispositivo |
+| `contact_started` | primeiro contato | tempo decorrido, canal |
+| `authorization_completed` | autorização concluída | tentativas, duração, erro |
+| `identity_validated` | validação concluída | método, tentativas, fallback |
+| `contract_approved` | aprovação | motivo em caso de recusa |
+| `loan_registered` | averbação | duração e retorno |
+| `credit_released` | liberação | tempo total |
+| `journey_abandoned` | abandono observado | etapa, motivo conhecido, última ação |
+
+---
+
+## 22. Riscos e dependências
+
+| Risco ou dependência | Tratamento sugerido | Áreas envolvidas |
+|---|---|---|
+| Fraude e engenharia social | contato verificável, orientação e monitoramento | Fraude, Segurança, Compliance |
+| Consentimento e LGPD | minimização de dados e validação jurídica | Jurídico, DPO, MTE |
+| Risco de crédito | separar conversão de aprovação saudável | Crédito e Risco |
+| Integrações externas | SLA, timeout, retentativa e contingência | Arquitetura, Dataprev/Serpro |
+| Biometria e autenticação | fallback seguro e retomada | Segurança e Engenharia |
+| Capacidade operacional | dimensionar volume e SLA | Atendimento e Operações |
+| Comunicação entre canais | governança de mensagens e identidade visual | Produto, Marketing e Compliance |
+
+---
+
+## 23. Roadmap Now, Next, Later
+
+### Now
+
+- instrumentar o funil;
+- estabelecer o baseline;
+- explicar próximos passos;
+- padronizar canal confiável;
+- definir SLA de contato;
+- testar protótipo com usuários.
+
+### Next
+
+- tracker da proposta;
+- recuperação de abandono;
+- fallback de validação;
+- otimização do handoff;
+- segmentação de métricas por canal e IF.
+
+### Later
+
+- pré-preenchimento avançado;
+- reuso de consentimento, se permitido;
+- integração de status ponta a ponta;
+- personalização responsável de oferta;
+- automação avançada de recuperação.
+
+---
+
+## 24. Atuação da Product Manager
+
+Neste case, a PM atua como responsável por conectar o problema do cliente ao resultado de negócio, sem perder de vista riscos e dependências.
+
+### Responsabilidades
+
+- formular o problema antes de defender uma solução;
+- organizar evidências, hipóteses e lacunas;
+- garantir a visão de jornada ponta a ponta;
+- alinhar MTE, IF, tecnologia, operação, risco, segurança e jurídico;
+- definir eventos, métricas, baseline e guardrails;
+- priorizar por impacto e aprendizado;
+- delimitar o MVP;
+- conduzir testes e experimentos;
+- comunicar decisões e trade-offs;
+- transformar aprendizados em roadmap.
+
+### Perguntas que a PM deve fazer
+
+1. Qual perda é abandono e qual é recusa ou falha técnica?
+2. Em qual etapa está a maior perda absoluta e relativa?
+3. O que está sob controle da instituição financeira?
+4. Qual hipótese pode ser testada com menor dependência externa?
+5. Como aumentar conversão sem piorar fraude ou qualidade de crédito?
+6. Quais dados o cliente realmente precisa repetir?
+7. Como o usuário reconhece um canal legítimo?
+8. Como recuperar uma falha sem reiniciar toda a jornada?
+9. Qual resultado justificará escalar a solução?
+10. O que aprenderemos mesmo se o experimento não funcionar?
+
+---
+
+## 25. Aprendizados e próximos passos
+
+### Aprendizados demonstrados pelo case
+
+- o pico de intenção não garante conclusão;
+- a troca de canal é uma parte do produto, não um detalhe operacional;
+- conversão deve ser analisada junto com risco e qualidade;
+- métricas precisam diferenciar abandono, recusa e erro;
+- uma solução de comunicação e continuidade pode ser testada antes de grandes integrações;
+- hipóteses devem permanecer explícitas até serem substituídas por evidência.
+
+### Próximos passos reais
+
+1. Validar o fluxo e as regras com especialistas do domínio.
+2. Instrumentar o funil e estabelecer o baseline.
+3. Entrevistar clientes que concluíram e abandonaram.
+4. Quantificar causas com dados, logs e atendimento.
+5. Validar viabilidade com arquitetura, jurídico, risco e segurança.
+6. Prototipar a transição e testar compreensão e confiança.
+7. Executar um experimento controlado quando viável.
+8. Atualizar priorização e roadmap com os aprendizados.
+
+---
+
+## 26. Ferramentas e frameworks utilizados
+
+| Necessidade | Framework | Ferramentas possíveis |
+|---|---|---|
+| Estruturar o processo | Double Diamond | Miro, Confluence |
+| Definir o problema | Problem Framing, 5W2H | Miro, Confluence |
+| Entender a necessidade | JTBD | Forms, entrevistas, Miro |
+| Mapear a experiência | Customer Journey Map | Miro, Figma |
+| Medir perdas | Funnel Analysis, coortes | Power BI, SQL, Product Analytics |
+| Identificar causas | 5 Porquês, árvore de problemas | Miro |
+| Explorar oportunidades | How Might We, OST | Miro, Productboard |
+| Priorizar | RICE, Impacto × Esforço | Planilha, Miro |
+| Definir escopo | MVP Canvas, Assumption Mapping | Miro, Confluence |
+| Prototipar | Wireframe e protótipo navegável | Figma |
+| Experimentar | Experiment Card, A/B test | Product Analytics, Power BI |
+| Planejar evolução | Now, Next, Later | Jira, Productboard, Miro |
+
+---
+
+## 27. Fontes oficiais consultadas
+
+1. [Ministério do Trabalho e Emprego — Crédito do Trabalhador](https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/credito-do-trabalhador)
+2. [Ministério do Trabalho e Emprego — Perguntas frequentes](https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/credito-do-trabalhador/perguntas-frequentes)
+3. [Lei nº 15.179, de 24 de julho de 2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15179.htm)
+
+---
+
+## 28. Nota de uso em entrevista
+
+Ao apresentar este case, deixe explícito:
+
+- quais informações são fatos oficiais;
+- quais dores vieram do mapeamento inicial;
+- quais dados e falas são simulados;
+- quais hipóteses ainda exigem validação;
+- quais decisões você tomaria como PM e com quais áreas;
+- como você mede resultado sem enfraquecer segurança, conformidade e risco.
+
+A qualidade do case não está em fingir que todos os dados existem. Ela está em demonstrar **como você transformaria incerteza em evidência, decisão e aprendizado de produto**.
