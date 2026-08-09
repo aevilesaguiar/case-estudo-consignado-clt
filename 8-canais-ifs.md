@@ -1,4 +1,4 @@
-Aeviles, a ideia central é esta:
+A ideia central é esta:
 
 > **Canal não é a mesma coisa que instituição, e instituição não é a mesma coisa que operador da infraestrutura.**
 
