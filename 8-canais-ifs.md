@@ -391,5 +391,107 @@ A FAQ do MTE ainda mantém a informação antiga de “um empréstimo por víncu
 ## 6. A frase que resume o ecossistema
 
 > O trabalhador pode chegar pela CTPS, pelo banco ou por um correspondente; porém, quem analisa, concede, assume o risco e responde pelo contrato é a instituição consignatária habilitada. A Dataprev averba, o empregador desconta, o eSocial e o FGTS Digital operacionalizam o recolhimento e a Caixa centraliza o repasse.
+>
+> Sim — e essa distinção é muito importante:
+
+> **A jornada pode começar fora da CTPS Digital, mas nenhuma contratação válida pode ficar fora da Plataforma Crédito do Trabalhador.**
+
+## Os principais caminhos
+
+### 1. CTPS Digital
+
+É o canal público e comparador:
+
+* trabalhador autoriza o compartilhamento dos dados;
+* solicita propostas;
+* recebe ofertas de diferentes instituições;
+* compara valor, parcela, taxa e CET;
+* escolhe uma proposta;
+* conclui a contratação com a instituição.
+
+É o canal com maior poder de comparação.
+
+### 2. Canais próprios da instituição
+
+O trabalhador pode iniciar pelo:
+
+* aplicativo do banco;
+* internet banking;
+* site;
+* agência;
+* canal digital oficial da instituição.
+
+Nesse caminho, ele vê principalmente a oferta daquela instituição. O banco consulta elegibilidade e margem, faz a análise de risco, formaliza o contrato e envia a averbação para a Dataprev.
+
+Essa possibilidade está expressamente prevista na legislação: a operação pode ser iniciada pela CTPS Digital ou pelos canais próprios das consignatárias. [Portaria MTE nº 435/2025 atualizada](https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/legislacao/portarias-1/portarias-vigentes-3/word-portaria-mte-no-435-de-20-de-marco-de-2025-compilada-em-26-06-2026.pdf).
+
+### 3. Correspondente bancário — corban
+
+A jornada também pode ocorrer por um corban vinculado à instituição:
+
+* loja física;
+* promotora de crédito;
+* vendedor autorizado;
+* correspondente digital;
+* plataforma parceira.
+
+O corban pode apoiar a simulação e a formalização, mas:
+
+* não é o credor;
+* não decide sozinho a aprovação;
+* não pode alterar livremente a taxa;
+* não pode cobrar taxa administrativa;
+* precisa estar vinculado à instituição consignatária;
+* a instituição financeira responde pelos atos dele.
+
+### 4. WhatsApp ou telefone
+
+Podem ser utilizados para:
+
+* divulgação;
+* atendimento;
+* envio de link;
+* orientação;
+* acompanhamento da proposta.
+
+Mas a ligação, a gravação de voz ou uma simples mensagem não são suficientes para autorizar a consignação. A formalização precisa ocorrer em uma jornada segura, com identificação, consentimento e autenticação exigidos pela regulamentação.
+
+## O que não muda entre os canais
+
+Independentemente de começar pela CTPS, app, agência ou corban, a operação precisa:
+
+1. ser concedida por instituição habilitada;
+2. respeitar a margem consignável;
+3. ter autorização do trabalhador;
+4. passar pela análise de crédito;
+5. ser formalizada com segurança;
+6. ser enviada pela instituição à Dataprev;
+7. ser averbada na Plataforma Crédito do Trabalhador;
+8. ser comunicada ao empregador para desconto.
+
+Portanto:
+
+> **Canal próprio não significa consignado “fora do governo”. Significa apenas que a porta de entrada é o banco ou seu parceiro. A averbação e a operação da folha continuam passando pela infraestrutura pública.**
+
+## Diferença estratégica entre as jornadas
+
+| Aspecto                   | CTPS Digital                  | Canal próprio do banco            | Corban                                          |
+| ------------------------- | ----------------------------- | --------------------------------- | ----------------------------------------------- |
+| Comparação                | Várias instituições           | Principalmente uma instituição    | Instituições representadas pelo corban          |
+| Experiência               | Padronizada pelo governo      | Controlada pelo banco             | Assistida pelo parceiro                         |
+| Aquisição                 | Demanda iniciada pelo cliente | Base, campanhas e canais do banco | Prospecção e venda assistida                    |
+| Análise de crédito        | Feita por cada instituição    | Feita pelo banco                  | Feita pela instituição representada             |
+| Responsável pelo contrato | Instituição escolhida         | Banco/consignatária               | Instituição representada                        |
+| Averbação                 | Dataprev                      | Dataprev                          | Dataprev                                        |
+| Risco relevante           | Abandono no redirecionamento  | Menor comparação de ofertas       | Venda agressiva, fraude ou informação incorreta |
+
+Para o seu case, isso muda bastante a análise do funil: você não terá apenas uma jornada “CTPS → banco”. Terá, no mínimo, três origens:
+
+* **CTPS Digital → proposta → instituição;**
+* **app/site/agência → simulação → contratação;**
+* **corban → proposta assistida → instituição.**
+
+E todas convergem na **averbação pela Dataprev**. A principal pergunta de Produto passa a ser: **qual canal gera mais contratação saudável, com menor abandono, menor fraude e melhor taxa para o trabalhador?**
+
 
 Para o seu case de Produto, eu dividiria os concorrentes por **papel regulatório** e, separadamente, por **canal de distribuição**. Isso evita comparar, por exemplo, um banco com um corban como se fossem concorrentes equivalentes. Um disputa concessão e carteira; o outro disputa aquisição e conversão.
