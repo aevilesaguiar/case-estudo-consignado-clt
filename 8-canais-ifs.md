@@ -492,8 +492,3 @@ Para o seu case, isso muda bastante a análise do funil: você não terá apenas
 * **corban → proposta assistida → instituição.**
 
 E todas convergem na **averbação pela Dataprev**. A principal pergunta de Produto passa a ser: **qual canal gera mais contratação saudável, com menor abandono, menor fraude e melhor taxa para o trabalhador?**
-
-[case-produto-credito-do-trabalhador.pptx](https://github.com/user-attachments/files/30873456/case-produto-credito-do-trabalhador.pptx)
-
-
-Para o seu case de Produto, eu dividiria os concorrentes por **papel regulatório** e, separadamente, por **canal de distribuição**. Isso evita comparar, por exemplo, um banco com um corban como se fossem concorrentes equivalentes. Um disputa concessão e carteira; o outro disputa aquisição e conversão.
