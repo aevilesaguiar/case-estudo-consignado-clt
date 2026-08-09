@@ -746,20 +746,6 @@ Neste case, a PM atua como responsável por conectar o problema do cliente ao re
 
 ---
 
-## 28. Nota de uso em entrevista
-
-Ao apresentar este case, deixe explícito:
-
-- quais informações são fatos oficiais;
-- quais dores vieram do mapeamento inicial;
-- quais dados e falas são simulados;
-- quais hipóteses ainda exigem validação;
-- quais decisões você tomaria como PM e com quais áreas;
-- como você mede resultado sem enfraquecer segurança, conformidade e risco.
-
-A qualidade do case não está em fingir que todos os dados existem. Ela está em demonstrar **como você transformaria incerteza em evidência, decisão e aprendizado de produto**.
-
-
 ## PPT Case
 
 [case-produto-credito-do-trabalhador.pptx](https://github.com/user-attachments/files/30873486/case-produto-credito-do-trabalhador.pptx)
