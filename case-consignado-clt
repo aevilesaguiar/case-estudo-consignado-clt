@@ -1,0 +1,75 @@
+Definição do problema
+
+  O problema deve apresentar:
+
+Quem é afetado;
+Em qual contexto;
+Qual dificuldade enfrenta;
+Qual o impacto para o cliente;
+Qual o impacto para o negócio;
+Quais evidências sustentam a afirmação.
+
+  Template de Problem Statement
+
+[Usuário], ao tentar [realizar uma tarefa], encontra [dificuldade], principalmente em [momento da jornada]. Isso provoca [impacto para o usuário] e gera [impacto para o negócio]. Identificamos esse problema por meio de [dados e evidências].
+
+Primeira versão para o seu case
+
+Como ainda não temos dados reais, é importante apresentar como hipótese de problema:
+
+Trabalhadores que escolhem uma proposta de consignado na CTPS Digital podem encontrar dificuldades para concluir a contratação após serem direcionados ao canal da instituição financeira. A mudança de ambiente, a demora no contato, o medo de fraude e a repetição de autorizações e validações podem aumentar o abandono entre a escolha da proposta e a liberação do crédito. Para a instituição financeira, isso representa perda de leads qualificados, redução da conversão e aumento do custo operacional.
+
+  3. Evidências necessárias para validar o problema
+
+Dados do funil
+
+Levantar:
+
+Quantidade de propostas escolhidas na etapa 5;
+Quantidade de clientes que chegaram ao canal da IF;
+Quantidade de autorizações concluídas;
+Quantidade de validações concluídas;
+Quantidade de propostas aprovadas;
+Quantidade de contratos averbados;
+Quantidade de créditos liberados;
+Drop-off entre cada etapa;
+Tempo de permanência em cada etapa;
+Time to Cash;
+Motivos de recusa e abandono.
+Dados de experiência
+
+Investigar:
+
+Reclamações sobre contatos suspeitos;
+Dificuldade para identificar o canal oficial;
+Falhas de biometria;
+Dúvidas sobre CET, parcelas e condições;
+Repetição de informações;
+Dificuldade para acompanhar a proposta;
+Contatos realizados na central de atendimento.
+
+
+  Dados técnicos e operacionais
+
+Verificar:
+
+Tempo para a IF receber a escolha;
+Tempo para o primeiro contato;
+Erros nas APIs;
+Timeouts e indisponibilidades;
+Falhas de autenticação;
+Instabilidades de Dataprev/Serpro;
+Propostas paradas ou expiradas;
+Taxa de sucesso na averbação.
+Pesquisa com usuários
+
+Perguntas importantes:
+
+O que você imaginava que aconteceria depois de escolher a proposta?
+Você entendeu que precisaria continuar em outro canal?
+Como identificou que o contato da instituição era verdadeiro?
+Em algum momento pensou que poderia ser golpe?
+Qual etapa foi mais difícil?
+Precisou informar novamente algum dado?
+Conseguiu acompanhar o andamento da proposta?
+O que faria você desistir da contratação?
