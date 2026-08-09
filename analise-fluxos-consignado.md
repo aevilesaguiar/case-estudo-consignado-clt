@@ -54,71 +54,21 @@ O funil deve mostrar quantos trabalhadores avançam em cada etapa, onde abandona
 
 ### 1. Taxa de conversão por etapa
 
-Mostra quantos clientes conseguiram avançar.
-
-[
-\text{Conversão da etapa} =
-\frac{\text{clientes que avançaram}}
-{\text{clientes que entraram na etapa}}
-\times 100
-]
-
-Exemplo: 1.000 clientes escolheram uma proposta e 900 chegaram ao canal da IF:
-
-[
-900 \div 1.000 = 90%
-]
-
-A conversão da etapa 5 para a 6 foi de **90%**.
+<img width="737" height="212" alt="image" src="https://github.com/user-attachments/assets/79bb05ed-1cbe-4ad5-a940-982e9c73c4ea" />
 
 ---
 
 ### 2. Drop-off por etapa
 
-Mostra quantos usuários desistiram ou foram impedidos de avançar.
+<img width="772" height="363" alt="image" src="https://github.com/user-attachments/assets/6e194023-0ef7-4d46-8c7e-5af23084aa56" />
 
-[
-\text{Drop-off} =
-\frac{\text{clientes que entraram} - \text{clientes que avançaram}}
-{\text{clientes que entraram}}
-\times 100
-]
-
-No mesmo exemplo:
-
-[
-(1.000 - 900) \div 1.000 = 10%
-]
-
-O drop-off entre a escolha e a chegada ao canal da IF foi de **10%**.
-
-O ideal é medir o abandono em cada passagem, principalmente:
-
-* Etapa 5 → 6: mudança de canal;
-* Etapa 6 → 7: espera e nova autorização;
-* Etapa 7 → 8: biometria e validações;
-* Etapa 8 → 9: aprovação e averbação.
 
 ---
 
 ### 3. Conversão pós-escolha
 
-Essa é uma das métricas mais importantes para a instituição financeira, porque parte de clientes que já demonstraram intenção real de contratar.
+<img width="777" height="231" alt="image" src="https://github.com/user-attachments/assets/40e7d9e8-39de-4b19-8d5d-bf99ef3e2ab7" />
 
-[
-\text{Conversão pós-escolha} =
-\frac{\text{créditos liberados na etapa 9}}
-{\text{propostas escolhidas na etapa 5}}
-\times 100
-]
-
-Se 1.000 pessoas escolheram a proposta e 600 receberam o crédito:
-
-[
-600 \div 1.000 = 60%
-]
-
-A conversão pós-escolha foi de **60%**, com drop-off acumulado de **40%**.
 
 ---
 
