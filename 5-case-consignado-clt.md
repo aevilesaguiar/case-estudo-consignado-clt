@@ -762,4 +762,8 @@ A qualidade do case não está em fingir que todos os dados existem. Ela está e
 
 ## PPT Case
 
+[case-produto-credito-do-trabalhador.pptx](https://github.com/user-attachments/files/30873486/case-produto-credito-do-trabalhador.pptx)
+
+
+
 
